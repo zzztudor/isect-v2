@@ -1,0 +1,8 @@
+/* Ajustări mici pentru dark */
+:root.dark .btn-ghost{border-color:var(--ring)}
+:root.dark .partners img{opacity:.95}
+
+/* FAQ dark */
+:root.dark .faq-q{background:var(--card);border-color:var(--ring)}
+:root.dark .faq-q:hover{background:var(--hover)}
+:root.dark .faq-a{background:var(--bg);border-color:var(--primary)}

@@ -1,0 +1,492 @@
+/* Header & nav */
+.site-header{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--ring);backdrop-filter:saturate(120%) blur(8px)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.nav .brand img{height:36px}
+.nav .nav-links{display:flex;gap:18px;align-items:center}
+.nav .nav-links a{color:var(--text);text-decoration:none;padding:8px 10px;border-radius:10px;border:1px solid transparent}
+.nav .nav-links a:hover{border-color:var(--ring)}
+#themeToggle{border:1px solid var(--ring);background:transparent;border-radius:10px;padding:8px 10px;cursor:pointer}
+
+/* Mobile menu */
+.menu-btn{display:none}
+@media (max-width:900px){
+  .menu-btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--ring);background:transparent;border-radius:10px;padding:8px 10px;cursor:pointer;margin-left:8px}
+  .nav .nav-links{position:absolute;top:64px;right:4%;left:4%;display:none;flex-direction:column;gap:10px;background:var(--card);border:1px solid var(--ring);border-radius:12px;padding:12px;box-shadow:var(--shadow)}
+  .nav .nav-links.open{display:flex}
+  .nav{position:relative}
+}
+.nav .nav-links a.active{outline:2px solid var(--primary); border-radius:10px}
+html{scroll-behavior:smooth;}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:32px;padding:48px 0}
+.hero h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:0 0 8px}
+.hero__bullets{display:grid;gap:6px;margin:16px 0 0 0;padding-left:20px}
+.hero__media{filter:drop-shadow(0 30px 40px rgba(0,0,0,.15))}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .hero__media{order:-1}
+}
+
+/* Hero with background image + overlay */
+/* Hero cu fundal imagine */
+.hero--bg {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  padding: 80px 20px;
+  color: #fff;
+  text-align: center;
+  background: url("../img/bg-hero-electrosim.jpg") center/cover no-repeat, url("img/bg-hero-electrosim.jpg") center/cover no-repeat;
+  min-height: 70vh;
+}
+
+.hero--bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45); /* overlay întunecat pt text vizibil */
+}
+
+.hero--bg * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero--bg h1 {
+  color: #fff;
+}
+
+.hero--bg p {
+  color: #f1f1f1;
+}
+
+.hero--bg .btn-ghost{ border-color:#fff; color:#fff }
+@media (max-width:900px){
+  .hero--bg{ grid-template-columns:1fr; padding:72px 0 }
+}
+
+/* Steps */
+.steps{display:grid;gap:10px;counter-reset:step}
+.steps li{background:var(--card);border:1px solid var(--ring);border-radius:12px;padding:12px}
+
+/* Testimonials */
+.testimonials{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:900px){.testimonials{grid-template-columns:1fr}}
+
+/* Pricing */
+.price .money{font-weight:700;font-size:1.6rem;margin:.25rem 0}
+.price.featured{outline:2px solid var(--primary)}
+
+/* Partners band */
+.partners-shell{padding:28px 0}
+.partners{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  background: transparent;
+}
+.partners img{height: 70px;opacity:.9;transition:.2s}
+.partners a:hover img{opacity:1;transform:translateY(-2px)}
+
+.partners .card{
+  background-color: #ffffff; /* soft beige */
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.partners .card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,.08);
+  background-color: #fffef8;
+}
+
+/* Contact */
+.form label{display:grid;gap:6px;margin-bottom:12px}
+.form input,.form textarea{border:1px solid var(--ring);background:var(--card);color:var(--text);border-radius:10px;padding:10px}
+.map .map-frame{position:relative;padding-bottom:56%;height:0;overflow:hidden;border-radius:12px;border:1px solid var(--ring)}
+.map .map-frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+
+/* Footer */
+.site-footer{margin-top:40px;border-top:1px solid var(--ring);background:var(--bg)}
+.foot-grid{display:grid;grid-template-columns:1.2fr .8fr .6fr;gap:20px;padding:24px 0;align-items:center}
+.foot-logo{height:28px;margin-bottom:10px}
+.foot-nav a{display:inline-block;margin-right:12px;color:var(--text);text-decoration:none}
+
+@media (max-width:900px){
+  .foot-grid{grid-template-columns:1fr}
+  .foot-cta{margin-top:6px}
+}
+
+/* CTA band */
+.cta-band{
+  background: transparent;
+  border-top:1px solid var(--ring);
+  border-bottom:1px solid var(--ring);
+}
+.cta-inn{display:flex;align-items:center;justify-content:space-between;padding:26px 0}
+@media (max-width:900px){.cta-inn{flex-direction:column;gap:10px}}
+
+/* FAQ */
+.faq{display:grid;gap:12px;margin:32px 0}
+.faq-q{cursor:pointer;padding:12px;border:1px solid var(--ring);border-radius:10px;background:var(--card);font-weight:600;transition:.2s}
+.faq-q:hover{background:var(--hover)}
+.faq-a{overflow:hidden;padding:0 12px;border-left:3px solid var(--primary);background:var(--bg);border-radius:0 0 10px 10px}
+.faq-a.open{padding:12px;border-top:1px solid var(--ring)}
+
+/* Background general aesthetic */
+body {
+  background: linear-gradient(180deg, #f9fbfd 0%, #f1f7fc 100%); /* pastel albastru discret */
+}
+
+/* HERO polish */
+.hero .hero__content{max-width:780px;margin:0 auto}
+.hero .lead{margin:10px auto 18px;opacity:.95}
+.hero .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+.hero h1{letter-spacing:-0.02em}
+.hero--bg h1{ text-shadow: 0 2px 24px rgba(0,0,0,.45); }
+
+/* Badge pill */
+.badge{
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:.875rem;
+  font-weight:600;
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.28);
+  color:#fff;
+  margin:0 auto 12px;
+}
+
+/* Chips list (hero bullets) */
+.chips{list-style:none;margin:16px 0 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.chips li{
+  padding:6px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.25);
+  color:#fff;
+  font-weight:600;
+  font-size:.95rem;
+  backdrop-filter:saturate(120%) blur(2px);
+}
+
+@media (max-width:900px){
+  .hero .hero__content{max-width:92%}
+  .hero--bg{padding:64px 16px}
+}
+/* Steps enhanced */
+.steps-wrap {
+  position: relative;
+  background: transparent;
+  padding: 80px 0;
+  text-align: center;
+}
+.steps-timeline {
+  list-style: none;
+  padding: 0;
+  margin: 40px auto 0;
+  max-width: 720px;
+  display: grid;
+  gap: 28px;
+}
+.steps-timeline li {
+  position: relative;
+  padding: 20px;
+  background: var(--card);
+  border: 1px solid var(--ring);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  font-size: 1.05rem;
+}
+.step-num {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:32px;
+  height:32px;
+  margin-bottom:8px;
+  border-radius:50%;
+  background:var(--primary);
+  color:#111;
+  font-weight:700;
+}
+
+/* Decorative waves */
+.wave {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wave-top {
+  top: 0;
+  transform: translateY(-100%);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'><path fill='%23ffffff' fill-opacity='0.6' d='M0,64L1440,224L1440,320L0,320Z'></path></svg>");
+}
+.wave-bottom {
+  bottom: 0;
+  transform: translateY(100%);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'><path fill='%23ffffff' fill-opacity='0.6' d='M0,256L1440,96L1440,0L0,0Z'></path></svg>");
+}
+
+/* FEATURES — minimal pastel background + subtle transitions */
+.features-wrap{ 
+  padding: 48px 0; 
+}
+.features .card{
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  background-color: #ffffff; /* soft */
+}
+.features .card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(0,0,0,.08);
+  border-color: rgba(0,0,0,.10);
+}
+.features .card:focus-within{ 
+  outline: 0; 
+  border-color: rgba(0,0,0,.14);
+}
+@media (prefers-reduced-motion: reduce){
+  .features .card{ transition: none; }
+}
+/* How (Cum lucrăm) section styling */
+.how-wrap{
+  background: transparent;
+}
+.how .card{
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.how .card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,.08);
+  background-color: #fffef8;
+} 
+/* Background global pastel discret (de la HERO până la footer) */
+body {
+  background: linear-gradient(180deg, #f9fbfd 0%, #f1f7fc 100%);
+}/* 1) Un singur wave per spațiu - ascundem pe cel de jos */
+.wave-bottom{ display:none; }
+
+/* 2) Valurile mai mici și subtile, fără să lase gol vizual */
+.wave{
+  height:48px;           /* din 60px */
+  pointer-events:none;   /* nu blochează click/scroll */
+}
+.wave-top{
+  /* alb cu opacitate mică, ca o trecere fină peste fundalul pastel */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'><path fill='%23ffffff' fill-opacity='0.35' d='M0,64L1440,224L1440,320L0,320Z'></path></svg>");
+}
+
+/* 3) Strângem puțin spațiile ca să nu pară gol între secțiuni */
+.steps-wrap{ padding-bottom:48px; }
+.features-wrap{ padding-bottom:48px; }/* Stilizare pentru pașii din secțiunea Cum lucrăm */
+.steps-timeline li {
+  background: #ffffff; /* bej deschis pastel */
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+}
+
+/* Numărul din față */
+.steps-timeline .step-num {
+  display: inline-block;
+  background: #007acc; /* albastru pastel */
+  color: white;
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+}
+
+/* Efect hover */
+.steps-timeline li:hover {
+  transform: scale(1.05);
+  border: 2px solid #FFD700; /* contur galben pastel */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}/* ===== Wave de tranziție între FAQ și footer ===== */
+.footer-wave {
+  display: block;
+  height: 100px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'><path fill='%232b2f33' d='M0,224L40,197.3C80,171,160,117,240,96C320,75,400,85,480,96C560,107,640,117,720,138.7C800,160,880,192,960,186.7C1040,181,1120,139,1200,128C1280,117,1360,139,1400,149.3L1440,160L1440,320L0,320Z'/></svg>")
+              center bottom / cover no-repeat;
+  box-shadow: 0 -10px 24px rgba(0,0,0,.15);
+}
+
+/* ===== Footer ===== */
+.footer-bar {
+  background: #2b2f33; /* gri închis prietenos */
+  color: #e9eef3;
+  font-size: 17px;
+  line-height: 1.6;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.footer-row {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* contact | parteneri | social */
+  align-items: center;
+  gap: 40px;
+}
+
+/* ===== Contact ===== */
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16.5px;
+}
+
+/* ===== Parteneri ===== */
+.footer-partners img {
+  height: 50px;
+  opacity: .85;
+  filter: grayscale(100%);
+  margin: 0 8px;
+  transition: opacity .2s ease, filter .2s ease, transform .2s ease;
+}
+.footer-partners img:hover {
+  opacity: 1;
+  filter: none;
+  transform: translateY(-3px);
+}
+
+/* ===== Social & Buton ===== */
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.footer-social a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #e9eef3;
+  transition: transform .2s ease, color .2s ease;
+}
+.footer-social a:hover { 
+  transform: translateY(-2px);
+  color: #FFD700;
+}
+
+.btn-book {
+  display: inline-block;
+  background: #FFD700;
+  color: #1b1b1b;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 0 8px 22px rgba(255,215,0,.4);
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+}
+.btn-book:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(255,215,0,.5);
+  background: #f1cb00;
+}
+
+/* ===== Copy Bar ===== */
+.footer-copy {
+  font-size: 14px;
+  opacity: .7;
+  margin-top: 14px;
+  padding-bottom: 18px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 920px){
+  .footer-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+  .footer-contact { align-items: center; }
+  .footer-partners img { height: 30px; }
+  .btn-book { font-size: 14px; padding: 9px 16px; }
+   /* containerul cu logo-uri: pe un rând, centrat */
+.footer-partners{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap: 18px;              /* spațiu între logo-uri */
+  z-index: 1;             /* deasupra oricăror wave/overlay */
+}
+
+/* link-urile sunt inline-block pentru hitbox corect */
+.footer-partners a{
+  display:inline-block;
+  line-height:0;          /* elimină spațiul sub img */
+}
+
+/* dimensiunea și efectul logo-urilor */
+.footer-partners a img{
+  max-height: 70px;       /* ajustează 40–60px după gust */
+  width:auto;
+  opacity: .9;
+  filter: grayscale(100%);
+  transition: transform .2s ease, opacity .2s ease, filter .2s ease;
+}
+.footer-partners a:hover img{
+  opacity:1;
+  filter:none;
+  transform: translateY(-2px);
+}
+
+/* dacă există un overlay peste (ex: wave), tăiem interacțiunea lui */
+.footer-wave{ pointer-events:none; }
+}
+ /* Grid contact */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  max-width: 1000px;   /* încadrăm frumos în pagină */
+  margin: 0 auto;
+  align-items: start;  /* fiecare card ia înălțimea lui */
+}
+
+/* Carduri contact mai compacte */
+.contact-card {
+  padding: 18px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  height: auto;        /* nu mai forțăm înălțimea */
+  min-height: unset;   /* elimină restricțiile default */
+}
+
+/* Harta mai mică */
+.map-wrap iframe {
+  height: 180px;       /* mai mică decât 240px */
+  border-radius: 8px;
+}.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* două coloane egale */
+  gap: 2rem;                     /* spacing între carduri (ca înainte) */
+  max-width: 1000px;             /* lățime totală mai compactă */
+  margin: 0 auto;                /* centrează în pagină */
+}
+
+.contact-card {
+  padding: 20px;                 /* mai aerisit */
+  min-height: 360px;             /* înălțime ca în versiunea preferată */
+}
