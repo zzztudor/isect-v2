@@ -687,7 +687,30 @@ section h2::after {
 .contact-info a:hover{ text-decoration:underline; }
 
 .contact-cta{ display:flex; gap:10px; margin-top:8px; flex-wrap:wrap; }
+.contact-info {
+  display: grid;
+  gap: 6px;
+  margin: 8px 0 4px;
+  color: #000; /* text negru */
+}
 
+.contact-info a {
+  color: #000; /* linkuri negre */
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+} 
+.contact-cta a {
+  color: #000; /* text negru */
+  font-weight: 600; /* optional, să iasă mai în evidență */
+  text-decoration: none;
+}
+
+.contact-cta a:hover {
+  text-decoration: underline; /* sau poți folosi alt efect */
+}
 /* Buton sticky pe mobil (opțional) */
 @media (max-width: 640px){
   .btn-primary[type="submit"]{ position:sticky; bottom:14px; }

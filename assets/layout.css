@@ -489,4 +489,177 @@ body {
 .contact-card {
   padding: 20px;                 /* mai aerisit */
   min-height: 360px;             /* înălțime ca în versiunea preferată */
+} 
+/* ===== FEEDBACK (varianta laptop/desktop) ===== */
+#feedback {
+  padding: 64px 0 56px;
+  background: linear-gradient(#f6f9fc, #eef6ff);
+}
+
+/* container pe mijloc */
+#feedback .container {
+  max-width: 1000px;  /* lățime fixă pentru secțiune */
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* titlu centrat */
+#feedback .sec-title {
+  font-weight: 800;
+  font-size: 2rem;
+  color: #111;
+  margin-bottom: 32px;
+}
+#feedback .sec-title::after {
+  content:"";
+  width:64px; height:4px;
+  display:block;
+  margin:12px auto 0;
+  background: linear-gradient(90deg, #ffd84e, #ffb800);
+  border-radius:999px;
+}
+
+/* grilă centrată pentru carduri */
+#feedback .t-grid {
+  display: flex;
+  justify-content: center;   /* cardurile pe mijloc */
+  gap: 24px;
+}
+
+/* carduri recenzie */
+#feedback .t-card {
+  flex: 0 1 300px;          /* fixăm o lățime rezonabilă */
+  max-width: 320px;
+  border-radius: 16px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 12px 30px rgba(0,0,0,.10);
+  transition: transform .2s ease, box-shadow .2s ease;
+  text-align: left;
+}
+#feedback .t-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 44px rgba(0,0,0,.16);
+}
+
+/* text recenzie */
+#feedback .t-text {
+  margin: 10px 0 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* autor */
+#feedback .t-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#feedback .t-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #ddd;
+}
+#feedback .t-name {
+  font-weight: 700;
+  color: #111;
+}
+#feedback .t-role {
+  font-size: .9rem;
+  color: #555;
+} 
+/* ===== FAQ – light, centrat, fără JS ===== */
+.faq{
+  padding: 64px 0 56px;
+  background:
+    radial-gradient(1200px 500px at 50% -15%, rgba(255,226,107,.10), transparent),
+    linear-gradient(#f6f9fc, #eef6ff);
+}
+.faq .container{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+.faq .sec-title{
+  font-weight: 800;
+  font-size: clamp(1.6rem,2.4vw,2.2rem);
+  color:#111; margin:0 0 28px;
+}
+.faq .sec-title::after{
+  content:""; width:64px; height:4px; display:block; margin:12px auto 0;
+  background: linear-gradient(90deg,#ffd84e,#ffb800);
+  border-radius:999px;
+}
+
+/* listă centrată */
+.faq-list{ display:grid; gap:16px; }
+
+/* card FAQ */
+.faq-item{
+  border-radius:14px;
+  background:#fff;
+  border:1px solid rgba(0,0,0,.08);
+  box-shadow:0 12px 28px rgba(0,0,0,.08);
+  overflow:hidden;
+  transition: box-shadow .2s ease, border-color .2s ease;
+}
+.faq-item:hover{
+  box-shadow:0 18px 40px rgba(0,0,0,.14);
+  border-color:rgba(0,0,0,.12);
+}
+
+/* bară de accent galben pe stânga */
+.faq-item::before{
+  content:""; position:absolute; display:block;
+  width:4px; height:100%; background:#ffb800; opacity:.9;
+}
+.faq-item{ position:relative; padding-left:0; }
+
+/* summary (întrebarea) */
+.faq-item > summary{
+  list-style:none;
+  cursor:pointer;
+  padding:16px 56px 16px 18px;
+  display:flex; align-items:center; justify-content:space-between;
+  gap:12px;
+  font-weight:800; color:#0f0f0f; text-align:left;
+}
+.faq-item > summary::-webkit-details-marker{ display:none; }
+
+/* icon săgeată */
+.faq-item .chev{
+  width:22px; height:22px; flex:0 0 22px; position:relative;
+}
+.faq-item .chev::before, .faq-item .chev::after{
+  content:""; position:absolute; inset:0; margin:auto;
+  width:10px; height:10px; border-right:2px solid #111; border-bottom:2px solid #111;
+  transform: rotate(-45deg) translateY(-2px);
+  transition: transform .2s ease;
+}
+.faq-item[open] .chev::before, .faq-item[open] .chev::after{
+  transform: rotate(135deg) translateY(2px);
+}
+
+/* răspunsul – animăm apariția */
+.faq-item .a{
+  padding: 0 18px 16px 18px;
+  color:#333; text-align:left; line-height:1.65;
+  max-height:0; opacity:0; overflow:hidden;
+  transition: max-height .3s ease, opacity .2s ease;
+}
+.faq-item[open] .a{
+  max-height:220px; /* suficient pentru 2–3 rânduri; mărește dacă ai texte lungi */
+  opacity:1;
+}
+
+/* micro‑accent la începutul răspunsului */
+.faq-item .a::before{
+  content:""; display:inline-block; width:8px; height:8px; border-radius:2px;
+  background:#ffb800; margin-right:8px; transform: translateY(-1px);
 }

@@ -79,13 +79,35 @@
   </section>
 
   <!-- TESTIMONIALE -->
-  <section class="section container" data-aos="fade-up">
-    <h2>Feedback de la clienți</h2>
-    <div class="grid testimonials">
-      <figure class="card feedback-card"><blockquote>„Rapid și profesionist.”</blockquote><figcaption>— Client Rezidențial</figcaption></figure>
-      <figure class="card feedback-card"><blockquote>„Automatizări impecabile.”</blockquote><figcaption>— Administrator Clădire</figcaption></figure>
-    </div>
-  </section>
+  <section id="feedback">
+  <h2 class="sec-title">Feedback de la clienți</h2>
+
+  <div class="t-grid">
+    <article class="t-card" data-rating="5">
+      <div class="t-stars"></div>
+      <p class="t-text">„Rapid și profesionist.”</p>
+      <div class="t-author">
+        <img class="t-avatar" src="avatar1.jpg" alt="">
+        <div>
+          <div class="t-name">Mihai P.</div>
+          <div class="t-role">Client rezidențial</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="t-card" data-rating="5">
+      <div class="t-stars"></div>
+      <p class="t-text">„Automatizări impecabile.”</p>
+      <div class="t-author">
+        <img class="t-avatar" src="avatar2.jpg" alt="">
+        <div>
+          <div class="t-name">Andra C.</div>
+          <div class="t-role">Administrator clădire</div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
 
   <section class="services section container" id="servicii" data-aos="fade-up">
   <h2>Serviciile noastre</h2>
@@ -152,21 +174,40 @@
 
   <div class="services-cta">
     
-    <div data-include="partials/parteners.html"></div>
+    
   </section>
 
 
   <!-- FAQ -->
-  <section class="section container" data-aos="fade-up">
-    <h2>Întrebări frecvente</h2>
-    <div class="faq">
-      <button class="faq-q">Cât durează proiectarea?</button>
-      <div class="faq-a">De regulă 3–7 zile, în funcție de complexitate.</div>
+  <section id="faq" class="faq">
+  <div class="container">
+    <h2 class="sec-title">Întrebări frecvente</h2>
 
-      <button class="faq-q">Faceți și execuție?</button>
-      <div class="faq-a">Da, prin partenerii noștri acreditați.</div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>
+          <span class="q">Cât durează proiectarea?</span>
+          <span class="chev" aria-hidden="true"></span>
+        </summary>
+        <div class="a">
+          De regulă <strong>3–7 zile</strong>, în funcție de complexitate.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="q">Faceți și execuție?</span>
+          <span class="chev" aria-hidden="true"></span>
+        </summary>
+        <div class="a">
+          Da, prin partenerii noștri acreditați.
+        </div>
+      </details>
+
+      <!-- adaugă oricâte <details class="faq-item"> ai nevoie -->
     </div>
-  </section> 
+  </div>
+</section>
   
 
   
