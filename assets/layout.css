@@ -662,4 +662,11 @@ body {
 .faq-item .a::before{
   content:""; display:inline-block; width:8px; height:8px; border-radius:2px;
   background:#ffb800; margin-right:8px; transform: translateY(-1px);
+}/* Subtitle uniform la secțiuni */
+.subtitle {
+  font-size: 1.05rem;
+  color: #555;
+  margin: -8px auto 24px;
+  max-width: 600px;
+  text-align: center;
 }

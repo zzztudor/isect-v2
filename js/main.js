@@ -16,11 +16,7 @@ function bindThemeToggle(){
   });
 }
 
-function bindFAQ(){
-  document.querySelectorAll('.faq-q').forEach(q => {
-    q.addEventListener('click', () => q.nextElementSibling.classList.toggle('open'));
-  });
-}
+// function bindFAQ removed to avoid duplicating FAQ logic; use faq.js for all FAQ interactions.
 
 function setYear(){
   const y = document.getElementById('year');
@@ -104,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
   restoreTheme();
   initAOS();
   bindThemeToggle();
-  bindFAQ();
+  // bindFAQ(); // removed; now handled by faq.js only
   setYear();
   bindMobileMenu();
   bindSmoothScroll();
