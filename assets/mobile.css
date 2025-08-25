@@ -1129,4 +1129,123 @@
     max-height: 40px;         /* ajustează înălțimea pe mobil */
     object-fit: contain;
   }
+}/* Centrare + dimensiuni mai mari logo-uri parteneri pe mobil */
+@media (max-width: 768px) {
+  .partners {
+    display: flex;
+    justify-content: center;   /* centrează pe mijloc */
+    align-items: center;
+    gap: 20px;                 /* spațiu între ele */
+    flex-wrap: wrap;           /* trec pe mai multe rânduri dacă nu încap */
+    padding: 16px 0;
+  }
+
+  .partners img {
+    max-height: 100px;          /* puțin mai mari decât 40px */
+    max-width: 120px;          /* limitează lățimea ca să nu iasă prea mari */
+    object-fit: contain;
+  }
+}@media (max-width: 768px) {
+  /* Butonul "Cere ofertă" din header */
+  .header-actions .btn-cta {
+    font-size: 14px;         /* mai mic textul */
+    padding: 6px 12px;       /* mai puțin padding */
+    border-radius: 20px;     /* colțuri mai rotunjite */
+  }
+
+  /* Burger menu */
+  .burger span {
+    height: 2px;
+    margin: 4px 0;
+    background: #ffd500;     /* galben vizibil */
+    border-radius: 2px;
+  }
+}@media (max-width: 768px) {
+  .hero__content h1 {
+    font-size: 22px;          /* titlul mai mic */
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  .hero__content .lead {
+    font-size: 15px;          /* subtitlu mai mic */
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  .hero__content .cta {
+    gap: 8px;
+  }
+
+  .hero__content .btn {
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 18px;
+  }
+
+  .hero__bullets li {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+}@media (max-width: 768px) {
+  .site-header {
+    --accent: #ffd91a;        /* galben brand */
+    --hdr-bg: var(--header-bg, #111);
+    --hdr-txt: var(--text, #fff);
+    position: sticky; top: 0; z-index: 1200;
+    background: var(--hdr-bg);
+  }
+
+  /* Layout header: logo | burger | CTA */
+  .site-header .header-inner{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 8px 12px;
+    max-width: 420px; margin: 0 auto;
+  }
+  .header-actions{ display: contents; }
+  .brand img{ height: 28px; width: auto; }
+
+  .header-actions .btn-cta{
+    grid-column: 3; justify-self: end;
+    padding: 6px 10px; min-height: 32px;
+    font-size: 13px; font-weight: 700;
+    border-radius: 10px;
+  }
+
+  /* BURGER */
+  .burger{
+    grid-column: 2; justify-self: center;
+    width: 38px; height: 32px;
+    display: grid; place-items: center;
+    border: 1.5px solid transparent;
+    border-radius: 9px;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+  }
+
+  /* cele 3 linii galbene */
+  .burger span{
+    position: absolute; left: 50%;
+    transform: translateX(-50%);
+    width: 20px; height: 2px; border-radius: 2px;
+    background: var(--accent);    /* acum galben */
+    transition: transform .2s ease, top .2s ease, opacity .2s ease;
+  }
+  .burger span:nth-child(1){ top: 10px; }
+  .burger span:nth-child(2){ top: 15px; }
+  .burger span:nth-child(3){ top: 20px; }
+
+  /* X când meniul e deschis */
+  .site-header.is-open .burger span:nth-child(1){
+    top: 15px; transform: translateX(-50%) rotate(45deg);
+  }
+  .site-header.is-open .burger span:nth-child(2){
+    opacity: 0;
+  }
+  .site-header.is-open .burger span:nth-child(3){
+    top: 15px; transform: translateX(-50%) rotate(-45deg);
+  }
 }
