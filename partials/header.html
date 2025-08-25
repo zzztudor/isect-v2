@@ -1,8 +1,7 @@
-<header class="site-header" id="siteHeader">
+<header class="site-header menu-yellow" id="siteHeader">
   <div class="container header-inner">
     <a href="index.html" class="brand">
       <img src="img/logos.png" alt="IS Electroconsult" />
-      
     </a>
 
     <nav class="main-nav" aria-label="Primar">
@@ -12,18 +11,20 @@
     </nav>
 
     <div class="header-actions">
-      <a href="contact.html" class="btn-cta">Cere ofertă</a>
-      <button class="burger" id="burger" aria-label="Meniu">
+      <!-- burger pe mobil (centru) -->
+      <button class="burger" id="burger" aria-label="Meniu" aria-controls="mobileNav" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
+      <!-- CTA dreapta -->
+      <a href="contact.html" class="btn-cta">Cere ofertă</a>
     </div>
   </div>
 
-  <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <nav class="mobile-nav" id="mobileNav" aria-hidden="true" aria-label="Meniu mobil">
     <a href="despre.html">Despre</a>
     <a href="servicii.html">Servicii</a>
     <a href="contact.html">Contact</a>
-    <a href="contact.html" class="btn-cta">Cere ofertă</a>
+    
   </nav>
 </header>
-<div class="header-spacer"></div>
+<div class="header-spacer" aria-hidden="true"></div>

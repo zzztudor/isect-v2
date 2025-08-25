@@ -359,4 +359,48 @@ if (mql.addEventListener) {
   } else {
     init();
   }
+})();// === Toggle meniu mobil pentru header-ul din partial (siteHeader/burger/mobileNav) ===
+(function attachHeaderToggle(){
+  function bind(){
+    var header    = document.getElementById('siteHeader');
+    var burger    = document.getElementById('burger');
+    var mobileNav = document.getElementById('mobileNav');
+    if (!header || !burger || !mobileNav) return false;
+
+    function setOpen(open){
+      header.classList.toggle('is-open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      mobileNav.setAttribute('aria-hidden', open ? 'false' : 'true');
+      document.body.classList.toggle('nav-open', open);
+    }
+
+    burger.addEventListener('click', function(e){
+      e.stopPropagation(); // ca să nu-l închidă handlerul de "click în afară"
+      setOpen(!header.classList.contains('is-open'));
+    });
+
+    // Închide când se apasă pe un link din meniu
+    mobileNav.addEventListener('click', function(e){
+      if (e.target.tagName === 'A') setOpen(false);
+    });
+
+    // Închide cu Escape
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape') setOpen(false);
+    });
+
+    // Închide la click în afara header-ului (backdrop / pagină)
+    document.addEventListener('click', function(e){
+      if (!header.classList.contains('is-open')) return;
+      if (!header.contains(e.target)) setOpen(false);
+    }, true);
+
+    return true;
+  }
+
+  // headerul vine din partial (include.js) — atașăm când apare
+  if (!bind()) {
+    var mo = new MutationObserver(function(){ if (bind()) mo.disconnect(); });
+    mo.observe(document.body, { childList: true, subtree: true });
+  }
 })();

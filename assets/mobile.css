@@ -1049,4 +1049,84 @@
     margin: 0 auto;
     padding-inline: 12px;
   }
+}@media (max-width: 768px) {
+  :root { --mobile-col-width: 420px; }
+
+  .site-header { --header-bg:#111; --menu-bg:#ffd91a; --menu-link:#111; position: sticky; top:0; z-index:1200; background: var(--header-bg); }
+  .site-header .header-inner {
+    display:grid; grid-template-columns:auto 1fr auto; align-items:center;
+    max-width: var(--mobile-col-width); margin:0 auto; padding:10px 12px; gap:8px;
+  }
+  .header-actions { display: contents; } /* plasăm burger + CTA direct în grid */
+
+  .brand img { height: 28px; width:auto; }
+
+  /* burger pe mijloc, vizibil */
+  .burger { grid-column:2; justify-self:center; width:44px; height:44px; border-radius:10px; background:#ffd91a; border:0; display:grid; place-items:center; position:relative; }
+  .burger span { position:absolute; left:50%; transform:translateX(-50%); width:22px; height:3px; background:#111; border-radius:2px; transition:.2s; }
+  .burger span:nth-child(1){ top:14px; } .burger span:nth-child(2){ top:20px; } .burger span:nth-child(3){ top:26px; }
+  .site-header.is-open .burger span:nth-child(1){ top:20px; transform:translateX(-50%) rotate(45deg); }
+  .site-header.is-open .burger span:nth-child(2){ opacity:0; }
+  .site-header.is-open .burger span:nth-child(3){ top:20px; transform:translateX(-50%) rotate(-45deg); }
+
+  /* CTA dreapta */
+  .btn-cta { grid-column:3; justify-self:end; padding:8px 12px; min-height:36px; border-radius:12px; font-weight:700; }
+
+  /* meniu mobil */
+  .mobile-nav { position:absolute; left:0; right:0; top:100%; background:var(--menu-bg); color:var(--menu-link);
+    display:none; gap:12px; padding:14px 16px 16px; border-radius:0 0 14px 14px; box-shadow:0 16px 40px rgba(0,0,0,.16);
+    transform:translateY(-6px); opacity:0; pointer-events:none; z-index:1201;
+  }
+  .mobile-nav a{ color:inherit; text-align:center; padding:12px; border-radius:10px; }
+  .site-header.is-open .mobile-nav{ display:grid !important; opacity:1 !important; pointer-events:auto !important; transform:translateY(0) !important; }
+
+  /* backdrop */
+  .site-header::after{ content:""; position:fixed; inset:0; background:rgba(0,0,0,.35); opacity:0; pointer-events:none; z-index:1100; transition:opacity .18s; }
+  .site-header.is-open::after{ opacity:1; pointer-events:auto; }
+
+  .header-spacer { height:0px !important; } /* spațiu fix sub bară pe mobil */
+}/* Centrare conținut HERO și CTA pe mobil */
+@media (max-width: 768px) {
+  .hero__content {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero__content .cta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .hero__content .cta .btn {
+    width: 80%;   /* butoanele mai late, mai aerisite */
+    max-width: 280px;
+  }
+
+  .hero__bullets {
+    text-align: center;
+    margin: 16px auto 0;
+  }
+
+  .hero__bullets li {
+    display: block;
+    margin: 4px 0;
+  }
+}/* Centrare logo-uri parteneri pe mobil */
+@media (max-width: 768px) {
+  .partners {
+    display: flex;
+    justify-content: center;  /* centrează logo-urile */
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;          /* ca să nu iasă în afara ecranului */
+    padding: 12px 0;
+  }
+
+  .partners img {
+    max-height: 40px;         /* ajustează înălțimea pe mobil */
+    object-fit: contain;
+  }
 }

@@ -1,40 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ro" class="no-js">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>IS Electroconsult — Soluții electrice & automatizări</title>
   <link rel="icon" href="favicon.ico" />
+
+  <!-- CSS (ordinea corectă) -->
   <link rel="stylesheet" href="assets/base.css" />
   <link rel="stylesheet" href="assets/layout.css" />
   <link rel="stylesheet" href="assets/components.css" />
-  <link rel="stylesheet" href="assets/dark.css" />  
-  <link rel="stylesheet" href="assets/css/mobile.css"> 
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <script defer src="js/include.js"></script>
-  <script defer src="js/main.js"></script> 
- </head>
+  <link rel="stylesheet" href="assets/dark.css" />
+  <link rel="stylesheet" href="assets/mobile.css" /> <!-- ← calea corectă -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+</head>
 <body>
-  <!-- HEADER -->
+  <!-- HEADER (partial) -->
   <div data-include="partials/header.html"></div>
 
   <!-- HERO -->
   <section class="hero hero--bg" data-aos="fade-up">
     <div class="container">
       <div class="hero__content">
-      <div class="badge">⚡ Soluții electrice & automatizări</div>
-      <h1>Gândim soluții. Instalăm încredere.</h1>
-      <p class="lead">Întreprindere simulată creată de studenți, cu misiunea de a oferi soluții electrice moderne, sigure și eficiente.</p>
-      <div class="cta">
-        <a class="btn btn-primary" href="servicii.html">Vezi pachetele</a>
-        <a class="btn btn-ghost" href="contact.html">Cere ofertă</a>
+        <div class="badge">⚡ Soluții electrice & automatizări</div>
+        <h1>Gândim soluții. Instalăm încredere.</h1>
+        <p class="lead">
+          Întreprindere simulată creată de studenți, cu misiunea de a oferi soluții electrice moderne,
+          sigure și eficiente.
+        </p>
+        <div class="cta">
+          <a class="btn btn-primary" href="servicii.html">Vezi pachetele</a>
+          <a class="btn btn-ghost" href="contact.html">Cere ofertă</a>
+        </div>
+        <ul class="hero__bullets chips">
+          <li>Proiectare tehnică conform normelor</li>
+          <li>Automatizări smart home & clădiri</li>
+          <li>Audit energetic cu recomandări clare</li>
+        </ul>
       </div>
-      <ul class="hero__bullets chips">
-        <li>Proiectare tehnică conform normelor</li>
-        <li>Automatizări smart home & clădiri</li>
-        <li>Audit energetic cu recomandări clare</li>
-      </ul>
-    </div>
     </div>
   </section>
 
@@ -70,151 +73,145 @@
     <div class="container" data-aos="fade-up">
       <h2>Cum lucrăm</h2>
       <ol class="steps-timeline">
-        <li><span class="step-num">1</span><strong>Evaluare 📝 </strong><br>Îți ascultăm nevoile și obiectivele.</li>
+        <li><span class="step-num">1</span><strong>Evaluare 📝</strong><br>Îți ascultăm nevoile și obiectivele.</li>
         <li><span class="step-num">2</span><strong>Proiect 📐</strong><br>Propunere tehnică + ofertă transparentă.</li>
-        <li><span class="step-num">3</span><strong>Implementare 🛠️ </strong><br>Execuție sigură & punere în funcțiune.</li>
+        <li><span class="step-num">3</span><strong>Implementare 🛠️</strong><br>Execuție sigură & punere în funcțiune.</li>
       </ol>
     </div>
     <div class="wave wave-bottom"></div>
   </section>
 
   <!-- TESTIMONIALE -->
-  <section id="feedback">
-  <h2 class="sec-title">Feedback de la clienți</h2>
-
-  <div class="t-grid">
-    <article class="t-card" data-rating="5">
-      <div class="t-stars"></div>
-      <p class="t-text">„Rapid și profesionist.”</p>
-      <div class="t-author">
-        <img class="t-avatar" src="avatar1.jpg" alt="">
-        <div>
-          <div class="t-name">Mihai P.</div>
-          <div class="t-role">Client rezidențial</div>
-        </div>
-      </div>
-    </article>
-
-    <article class="t-card" data-rating="5">
-      <div class="t-stars"></div>
-      <p class="t-text">„Automatizări impecabile.”</p>
-      <div class="t-author">
-        <img class="t-avatar" src="avatar2.jpg" alt="">
-        <div>
-          <div class="t-name">Andra C.</div>
-          <div class="t-role">Administrator clădire</div>
-        </div>
-      </div>
-    </article>
-  </div>
-</section>
-
-  <section class="services section container" id="servicii" data-aos="fade-up">
-  <h2>Serviciile noastre</h2>
-  <p class="subtitle">Soluții electrice complete — proiectare, audit, execuție, mentenanță și consultanță.</p>
-
-    <a href="contact.html" class="btn-cta">📅 Cere ofertă</a>
-  </div>
-  <div class="srv-slider">
-    <button class="srv-btn srv-prev" aria-label="Anterior">‹</button>
-
-    <div class="srv-viewport" aria-live="polite">
-      <div class="srv-row">
-        <article class="srv-card">
-          <h3>📐 Proiectare tehnică</h3>
-          <ul class="srv-list">
-            <li>Basic — <b>600 lei</b></li>
-            <li>Standard — <b>1200 lei</b></li>
-            <li>Avansat — <b>2500 lei</b></li>
-          </ul>
+  <section id="feedback" class="section">
+    <div class="container">
+      <h2 class="sec-title">Feedback de la clienți</h2>
+      <div class="t-grid">
+        <article class="t-card" data-rating="5">
+          <div class="t-stars"></div>
+          <p class="t-text">„Rapid și profesionist.”</p>
+          <div class="t-author">
+            <img class="t-avatar" src="avatar1.jpg" alt="">
+            <div>
+              <div class="t-name">Mihai P.</div>
+              <div class="t-role">Client rezidențial</div>
+            </div>
+          </div>
         </article>
-
-        <article class="srv-card">
-          <h3>🔍 Audit energetic</h3>
-          <p>Evaluare și recomandări clare pentru optimizare.</p>
-          <p class="price"><b>300 lei</b></p>
-        </article>
-
-        <article class="srv-card">
-          <h3>⚡ Audit instalații electrice</h3>
-          <ul class="srv-list">
-            <li>Simple — <b>200 lei</b></li>
-            <li>Complex — <b>800 lei</b></li>
-          </ul>
-        </article>
-
-        <article class="srv-card">
-          <h3>🛠️ Mentenanță & suport</h3>
-          <p>Întreținere periodică și intervenții rapide.</p>
-          <p class="price"><b>200 lei</b></p>
-        </article>
-
-        <article class="srv-card">
-          <h3>🔌 Montaj panou electric</h3>
-          <p>Montaj profesionist pentru siguranță și eficiență.</p>
-          <p class="price"><b>1300 lei</b></p>
-        </article>
-
-        <article class="srv-card">
-          <h3>💡 Consultanță echipamente</h3>
-          <p>Alegerea soluțiilor optime pentru proiectul tău.</p>
-          <p class="price"><b>500 lei</b></p>
-        </article>
-
-        <article class="srv-card">
-          <h3>🔎 Verificare aparat electric</h3>
-          <p>Diagnosticare rapidă și verificare siguranță.</p>
-          <p class="price"><b>250 lei</b></p>
+        <article class="t-card" data-rating="5">
+          <div class="t-stars"></div>
+          <p class="t-text">„Automatizări impecabile.”</p>
+          <div class="t-author">
+            <img class="t-avatar" src="avatar2.jpg" alt="">
+            <div>
+              <div class="t-name">Andra C.</div>
+              <div class="t-role">Administrator clădire</div>
+            </div>
+          </div>
         </article>
       </div>
     </div>
-
-    <button class="srv-btn srv-next" aria-label="Următor">›</button>
-  </div>
-
-  <div class="services-cta">
-    
-    
   </section>
 
+  <!-- SERVICII (slider) -->
+  <section class="services section container" id="servicii" data-aos="fade-up">
+    <header class="section-head">
+      <h2 class="sec-title">Serviciile noastre</h2>
+      <p class="subtitle">Soluții electrice complete — proiectare, audit, execuție, mentenanță și consultanță.</p>
+      <a href="contact.html" class="btn-cta">📅 Cere ofertă</a>
+    </header>
+
+    <div class="srv-slider" aria-label="Slider servicii">
+      <button class="srv-btn srv-prev" aria-label="Anterior">‹</button>
+
+      <div class="srv-viewport" aria-live="polite">
+        <div class="srv-row">
+          <article class="srv-card">
+            <h3>📐 Proiectare tehnică</h3>
+            <ul class="srv-list">
+              <li>Basic — <b>600 lei</b></li>
+              <li>Standard — <b>1200 lei</b></li>
+              <li>Avansat — <b>2500 lei</b></li>
+            </ul>
+          </article>
+
+          <article class="srv-card">
+            <h3>🔍 Audit energetic</h3>
+            <p>Evaluare și recomandări clare pentru optimizare.</p>
+            <p class="price"><b>300 lei</b></p>
+          </article>
+
+          <article class="srv-card">
+            <h3>⚡ Audit instalații electrice</h3>
+            <ul class="srv-list">
+              <li>Simple — <b>200 lei</b></li>
+              <li>Complex — <b>800 lei</b></li>
+            </ul>
+          </article>
+
+          <article class="srv-card">
+            <h3>🛠️ Mentenanță &amp; suport</h3>
+            <p>Întreținere periodică și intervenții rapide.</p>
+            <p class="price"><b>200 lei</b></p>
+          </article>
+
+          <article class="srv-card">
+            <h3>🔌 Montaj panou electric</h3>
+            <p>Montaj profesionist pentru siguranță și eficiență.</p>
+            <p class="price"><b>1300 lei</b></p>
+          </article>
+
+          <article class="srv-card">
+            <h3>💡 Consultanță echipamente</h3>
+            <p>Alegerea soluțiilor optime pentru proiectul tău.</p>
+            <p class="price"><b>500 lei</b></p>
+          </article>
+
+          <article class="srv-card">
+            <h3>🔎 Verificare aparat electric</h3>
+            <p>Diagnosticare rapidă și verificare siguranță.</p>
+            <p class="price"><b>250 lei</b></p>
+          </article>
+        </div>
+      </div>
+
+      <button class="srv-btn srv-next" aria-label="Următor">›</button>
+    </div>
+
+    <div class="services-cta">
+      <a href="contact.html" class="btn-cta ghost">Solicită consultanță</a>
+    </div>
+  </section>
 
   <!-- FAQ -->
   <section id="faq" class="faq">
-  <div class="container">
-    <h2 class="sec-title">Întrebări frecvente</h2>
+    <div class="container">
+      <h2 class="sec-title">Întrebări frecvente</h2>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>
+            <span class="q">Cât durează proiectarea?</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="a">De regulă <strong>3–7 zile</strong>, în funcție de complexitate.</div>
+        </details>
 
-    <div class="faq-list">
-      <details class="faq-item" open>
-        <summary>
-          <span class="q">Cât durează proiectarea?</span>
-          <span class="chev" aria-hidden="true"></span>
-        </summary>
-        <div class="a">
-          De regulă <strong>3–7 zile</strong>, în funcție de complexitate.
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>
-          <span class="q">Faceți și execuție?</span>
-          <span class="chev" aria-hidden="true"></span>
-        </summary>
-        <div class="a">
-          Da, prin partenerii noștri acreditați.
-        </div>
-      </details>
-
-      <!-- adaugă oricâte <details class="faq-item"> ai nevoie -->
+        <details class="faq-item">
+          <summary>
+            <span class="q">Faceți și execuție?</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="a">Da, prin partenerii noștri acreditați.</div>
+        </details>
+      </div>
     </div>
-  </div>
-</section>
-  
+  </section>
 
-  
-
-  <!-- FOOTER -->
- 
+  <!-- FOOTER (partial) -->
   <div data-include="partials/footer.html"></div>
+
+  <!-- JS la final (ordinea corectă) -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script defer src="js/include.js"></script>
+  <script defer src="js/main.js"></script>
 </body>
 </html>

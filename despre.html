@@ -1,74 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ro">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Despre noi — IS Electroconsult</title>
+
+  <!-- CSS în ordinea corectă -->
   <link rel="stylesheet" href="assets/base.css" />
   <link rel="stylesheet" href="assets/layout.css" />
   <link rel="stylesheet" href="assets/components.css" />
-  <link rel="stylesheet" href="assets/dark.css" /> 
-  <link rel="stylesheet" href="assets/css/mobile.css"> 
-  <script defer src="js/include.js"></script>
-  <script defer src="js/main.js"></script>
+  <link rel="stylesheet" href="assets/dark.css" />
+  <link rel="stylesheet" href="assets/mobile.css" />
 </head>
 <body>
+  <!-- HEADER din partial -->
   <div data-include="partials/header.html"></div>
 
+  <!-- BANDĂ „Despre noi” -->
   <section class="container about-band">
-  <h2>Despre noi</h2>
-   <div class="values">
-  <span class="chip">Calitate</span>
-  <span class="chip">Siguranță</span>
-  <span class="chip">Eficiență</span>
-</div>
-  <p class="lead">Continuăm misiunea ta: soluții electrice eficiente, sigure și moderne.</p>
-
-  <div class="about-grid">
-    <div class="card-xl" data-aos="fade-up">
-      <h3><span class="card-icon">🛠️</span>Misiune</h3>
-      <p>Întreprindere simulată de studenți, concentrată pe soluții electrice moderne, sigure și eficiente.</p>
-    </div>
-
-    <div class="card-xl" data-aos="fade-up" data-aos-delay="120">
-      <h3><span class="card-icon">🚀</span>Viziune</h3>
-      <p>Clădiri inteligente, consum optimizat și confort digital — cu un ROI real.</p>
-    </div>
-  </div>
-</section><div class="kpi-bar" data-aos="fade-up">
-  <div class="kpi"><b>150+</b><span>proiecte finalizate</span></div>
-  <div class="kpi"><b>98%</b><span>clienți mulțumiți</span></div>
-  <div class="kpi"><b>10 ani</b><span>experiență cumulată</span></div>
-</div>
-<section class="section container" data-aos="fade-up">
-  <h2>Echipa</h2>
-
-  <div class="team-slider">
-    <button class="ts-btn ts-prev" aria-label="Anterior">‹</button>
-
-    <div class="ts-viewport">
-      <div class="team-row">  <!-- era .grid.team -->
-        <div class="team-card"><img src="img/pershold.png" alt="Zamfir Tudor Răzvan"><h3>Zamfir Tudor Răzvan</h3><p>Responsabil activitate de marketing</p></div>
-        <div class="team-card"><img src="img/pershold.png" alt="Popovici Marius"><h3>Popovici Marius</h3><p>Responsabil secretariat/asistent manager</p></div>
-        <div class="team-card"><img src="img/pershold.png" alt="Neagu Loredana Maria"><h3>Neagu Loredana Maria</h3><p>Responsabil financiar – contabilitate</p></div>
-        <div class="team-card"><img src="img/pershold.png" alt="Maxim Ionela"><h3>Maxim Ionela</h3><p>Manager general</p></div>
-        <div class="team-card"><img src="img/pershold.png" alt="Leizeriuc Ana Cosmina"><h3>Leizeriuc Ana Cosmina</h3><p>Responsabil ofertare pe piața internă</p></div>
-        <div class="team-card"><img src="img/pershold.png" alt="Ivanov Ionel Lucian"><h3>Ivanov Ionel Lucian</h3><p>Responsabil personal</p></div>
-        <div class="team-card"><img src="img/pershold.png" alt="Horga Rareș"><h3>Horga Rareș</h3><p>Responsabil gestionare comenzi interne</p></div>
-        <div class="team-card"><img src="img/pershold.png" alt="Ciubotaru Cezar Paul"><h3>Ciubotaru Cezar Paul</h3><p>Responsabil cercetări de piață</p></div>
-        <div class="team-card"><img src="img/pershold.png" alt="Cernat Petru Marian"><h3>Cernat Petru Marian</h3><p>Responsabil facturare</p></div>
-        <div class="team-card"><img src="img/pershold.png" alt="Andrei Felix Rudolf"><h3>Andrei Felix Rudolf</h3><p>Responsabil achiziții</p></div>
+    <header class="section-head">
+      <h2 class="sec-title">Despre noi</h2>
+      <div class="values">
+        <span class="chip">Calitate</span>
+        <span class="chip">Siguranță</span>
+        <span class="chip">Eficiență</span>
       </div>
+      <p class="lead">Continuăm misiunea ta: soluții electrice eficiente, sigure și moderne.</p>
+    </header>
+
+    <div class="about-grid">
+      <article class="card-xl" data-aos="fade-up">
+        <h3><span class="card-icon">🛠️</span>Misiune</h3>
+        <p>Întreprindere simulată de studenți, concentrată pe soluții electrice moderne, sigure și eficiente.</p>
+      </article>
+
+      <article class="card-xl" data-aos="fade-up" data-aos-delay="120">
+        <h3><span class="card-icon">🚀</span>Viziune</h3>
+        <p>Clădiri inteligente, consum optimizat și confort digital — cu un ROI real.</p>
+      </article>
     </div>
+  </section>
 
-    <button class="ts-btn ts-next" aria-label="Următor">›</button>
+  <!-- KPI bar -->
+  <div class="kpi-bar" data-aos="fade-up">
+    <div class="kpi"><b>150+</b><span>proiecte finalizate</span></div>
+    <div class="kpi"><b>98%</b><span>clienți mulțumiți</span></div>
+    <div class="kpi"><b>10 ani</b><span>experiență cumulată</span></div>
   </div>
-</section>
 
+  <!-- Echipa (slider) -->
+  <section class="section container" data-aos="fade-up">
+    <h2 class="sec-title">Echipa</h2>
+
+    <div class="team-slider">
+      <button class="ts-btn ts-prev" aria-label="Anterior">‹</button>
+
+      <div class="ts-viewport">
+        <div class="team-row">
+          <div class="team-card"><img src="img/pershold.png" alt="Zamfir Tudor Răzvan"><h3>Zamfir Tudor Răzvan</h3><p>Responsabil activitate de marketing</p></div>
+          <div class="team-card"><img src="img/pershold.png" alt="Popovici Marius"><h3>Popovici Marius</h3><p>Responsabil secretariat/asistent manager</p></div>
+          <div class="team-card"><img src="img/pershold.png" alt="Neagu Loredana Maria"><h3>Neagu Loredana Maria</h3><p>Responsabil financiar – contabilitate</p></div>
+          <div class="team-card"><img src="img/pershold.png" alt="Maxim Ionela"><h3>Maxim Ionela</h3><p>Manager general</p></div>
+          <div class="team-card"><img src="img/pershold.png" alt="Leizeriuc Ana Cosmina"><h3>Leizeriuc Ana Cosmina</h3><p>Responsabil ofertare pe piața internă</p></div>
+          <div class="team-card"><img src="img/pershold.png" alt="Ivanov Ionel Lucian"><h3>Ivanov Ionel Lucian</h3><p>Responsabil personal</p></div>
+          <div class="team-card"><img src="img/pershold.png" alt="Horga Rareș"><h3>Horga Rareș</h3><p>Responsabil gestionare comenzi interne</p></div>
+          <div class="team-card"><img src="img/pershold.png" alt="Ciubotaru Cezar Paul"><h3>Ciubotaru Cezar Paul</h3><p>Responsabil cercetări de piață</p></div>
+          <div class="team-card"><img src="img/pershold.png" alt="Cernat Petru Marian"><h3>Cernat Petru Marian</h3><p>Responsabil facturare</p></div>
+          <div class="team-card"><img src="img/pershold.png" alt="Andrei Felix Rudolf"><h3>Andrei Felix Rudolf</h3><p>Responsabil achiziții</p></div>
+        </div>
+      </div>
+
+      <button class="ts-btn ts-next" aria-label="Următor">›</button>
+    </div>
+  </section>
+
+  <!-- Parteneri -->
   <section class="partners-shell" data-aos="fade-up">
     <div data-include="partials/parteners.html"></div>
   </section>
 
+  <!-- FOOTER (partial) -->
   <div data-include="partials/footer.html"></div>
+
+  <!-- JS la final -->
+  <script defer src="js/include.js"></script>
+  <script defer src="js/main.js"></script>
 </body>
-</html> 
+</html>

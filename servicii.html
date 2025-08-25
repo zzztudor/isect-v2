@@ -1,30 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ro">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Servicii — IS Electroconsult</title>
+
+  <!-- CSS (ordinea corectă) -->
   <link rel="stylesheet" href="assets/base.css" />
   <link rel="stylesheet" href="assets/layout.css" />
   <link rel="stylesheet" href="assets/components.css" />
-  <link rel="stylesheet" href="assets/dark.css" /> 
-  <link rel="stylesheet" href="assets/mobile.css"> 
-  <script defer src="js/include.js"></script>
-  <script defer src="js/main.js"></script>
+  <link rel="stylesheet" href="assets/dark.css" />
+  <link rel="stylesheet" href="assets/mobile.css" /> <!-- ultimul -->
 </head>
 <body>
-  <!-- Include header (NU pune markup-ul headerului aici) -->
+  <!-- HEADER (partial) — nu mai pune markup aici -->
   <div data-include="partials/header.html"></div>
 
-  <main>
+  <main id="main">
     <section class="services section container" id="servicii" data-aos="fade-up">
-     <header class="section-head">
-  <h2 class="sec-title">Serviciile noastre</h2>
-  <p class="subtitle">Soluții electrice complete — proiectare, audit, execuție, mentenanță și consultanță.</p>
-  <a href="contact.html" class="btn-cta">📅 Cere ofertă</a>
-</header>
+      <header class="section-head">
+        <h1 class="sec-title">Serviciile noastre</h1>
+        <p class="subtitle">Soluții electrice complete — proiectare, audit, execuție, mentenanță și consultanță.</p>
+        <a href="contact.html" class="btn-cta">📅 Cere ofertă</a>
+      </header>
 
-      <!-- Slider servicii -->
+      <!-- Slider servicii (controlat din js/main.js) -->
       <div class="srv-slider" aria-label="Slider servicii">
         <button class="srv-btn srv-prev" aria-label="Anterior">‹</button>
 
@@ -82,54 +82,21 @@
         <button class="srv-btn srv-next" aria-label="Următor">›</button>
       </div>
 
-      <!-- CTA secundar + Parteneri prin partial -->
+      <!-- CTA secundar -->
       <div class="services-cta">
         <a href="contact.html" class="btn-cta ghost">Solicită consultanță</a>
       </div>
 
-      <!-- Include parteneri (NU lipi HTML-ul aici) -->
-      
+      <!-- Parteneri (partial) -->
+      <div data-include="partials/parteners.html"></div>
     </section>
   </main>
 
-  <!-- Include footer (NU pune markup-ul footerului aici) -->
+  <!-- FOOTER (partial) -->
   <div data-include="partials/footer.html"></div>
 
-  <!-- Scripturile site-ului -->
+  <!-- JS (include partiale, apoi scripturile site-ului) -->
   <script defer src="js/include.js"></script>
   <script defer src="js/main.js"></script>
-
-  <!-- Slider logic minim (vanilla) -->
-  <script>
-    (function() {
-      const viewport = document.querySelector('.srv-viewport');
-      const row = document.querySelector('.srv-row');
-      const prev = document.querySelector('.srv-prev');
-      const next = document.querySelector('.srv-next');
-      if (!viewport || !row || !prev || !next) return;
-
-      let cardWidth = 0, gap = 0, x = 0;
-
-      const measure = () => {
-        const card = row.querySelector('.srv-card');
-        const style = card ? getComputedStyle(card) : null;
-        cardWidth = card ? card.offsetWidth : 0;
-        gap = style ? parseFloat(style.marginRight) : 24;
-      };
-
-      const maxScroll = () => Math.max(0, row.scrollWidth - viewport.clientWidth);
-
-      const go = (dir = 1) => {
-        const step = Math.max(cardWidth + gap, viewport.clientWidth * 0.6);
-        x = Math.min(Math.max(0, x + dir * step), maxScroll());
-        row.style.transform = `translateX(${-x}px)`;
-      };
-
-      prev.addEventListener('click', () => go(-1));
-      next.addEventListener('click', () => go(1));
-      window.addEventListener('resize', () => { measure(); x = Math.min(x, maxScroll()); row.style.transform = `translateX(${-x}px)`; });
-
-      measure();
-    })();
-  </script>
 </body>
+</html>
