@@ -1153,4 +1153,20 @@ body {
   max-width: 800px;   /* ca să nu fie prea lat pe ecrane mari */
   margin: 0 auto 24px;
   color: var(--muted);
+}.sec-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.sec-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 60px;               /* lungimea liniei */
+  height: 3px;               /* grosimea */
+  background: var(--primary, #ffd91a); /* culoarea liniei */
+  border-radius: 2px;
 }

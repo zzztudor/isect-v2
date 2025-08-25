@@ -1,79 +1,94 @@
-<link rel="stylesheet" href="assets/base.css">
-<link rel="stylesheet" href="assets/layout.css">
-<link rel="stylesheet" href="assets/components.css">
-<link rel="stylesheet" href="assets/mobile.css">  
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><div data-include="partials/header.html"></div>
-<div class="header-spacer"></div>
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <title>Contact — IS Electroconsult</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Contactează IS Electroconsult pentru proiectare, audit energetic, instalații electrice și consultanță. Răspundem rapid.">
 
-<main>
-  <section id="contact" class="contact-page">
-    <div class="container contact-grid">
+  <!-- CSS (ordinea corectă) -->
+  <link rel="stylesheet" href="assets/base.css">
+  <link rel="stylesheet" href="assets/layout.css">
+  <link rel="stylesheet" href="assets/components.css">
+  <link rel="stylesheet" href="assets/mobile.css"><!-- ultimul -->
+</head>
+<body>
 
-      <!-- Stânga: formular -->
-      <div class="card contact-card">
-        <h2 class="sec-title">Contact</h2>
-        <p class="subtitle">Scrie-ne câteva detalii și revenim rapid cu răspunsul sau oferta potrivită.</p>
+  <!-- HEADER (inclus prin partial). NU mai adăuga încă un .header-spacer aici -->
+  <div data-include="partials/header.html"></div>
 
-        <form id="contactForm" novalidate>
-          <div class="form-row">
-            <label> Nume
-              <input name="name" type="text" required autocomplete="name" placeholder="Numele tău">
+  <main id="main" tabindex="-1">
+    <section id="contact" class="contact-page">
+      <div class="container contact-grid">
+
+        <!-- Stânga: formular -->
+        <div class="card contact-card">
+          <h1 class="sec-title">Contact</h1>
+          <p class="subtitle">Scrie-ne câteva detalii și revenim rapid cu răspunsul sau oferta potrivită.</p>
+
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <label> Nume
+                <input name="name" type="text" required autocomplete="name" placeholder="Numele tău">
+              </label>
+              <label> Email
+                <input name="email" type="email" required autocomplete="email" placeholder="email@exemplu.ro">
+              </label>
+            </div>
+
+            <label> Subiect
+              <input name="subject" type="text" autocomplete="on" placeholder="Ex: Ofertă audit energetic">
             </label>
-            <label> Email
-              <input name="email" type="email" required autocomplete="email" placeholder="email@exemplu.ro">
+
+            <label> Mesaj
+              <textarea name="message" rows="6" required placeholder="Scrie-ne câteva detalii…"></textarea>
             </label>
+
+            <!-- honeypot anti-bot (ascuns) -->
+            <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <button class="btn btn-primary" type="submit">Trimite</button>
+
+            <!-- mesaj UX -->
+            <p id="formNote" class="form-note" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <!-- Dreapta: hartă + info -->
+        <aside class="contact-aside">
+          <div class="card map-card">
+            <h2>Ne găsești aici</h2>
+            <div class="map-wrap">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2713.251011834957!2d27.592501789433747!3d47.152938093319186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cafb99b7149e6d%3A0x6697aed06a12ed81!2sFacultatea%20de%20Inginerie%20Electric%C4%83%2C%20Energetic%C4%83%20%C8%99i%20Informatic%C4%83%20aplicat%C4%83!5e0!3m2!1sen!2sro!4v1478706427624"
+                width="100%" height="420" style="border:0;" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+                aria-label="Harta sediu IS Electroconsult">
+              </iframe>
+            </div>
           </div>
 
-          <label> Subiect
-            <input name="subject" type="text" autocomplete="on" placeholder="Ex: Ofertă audit energetic">
-          </label>
+          <div class="card info-card">
+            <h2>Contact rapid</h2>
+            <div class="contact-info">
+              <a href="tel:+40232278683">📞 +40 232 278 683</a>
+              <a href="mailto:electroconsultgroup@gmail.com">✉️ electroconsultgroup@gmail.com</a>
+              <a href="https://wa.me/40232278683" target="_blank" rel="noopener">💬 WhatsApp</a>
+              <p>📍 Bulevardul Profesor Dimitrie Mangeron 21–23, Iași, RO</p>
+              <p>🕑 L–V: 09:00–17:00</p>
+            </div>
+          </div>
+        </aside>
 
-          <label> Mesaj
-            <textarea name="message" rows="6" required placeholder="Scrie-ne câteva detalii…"></textarea>
-          </label>
-
-          <!-- honeypot anti-bot (ascuns) -->
-          <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off">
-
-          <button class="btn btn-primary" type="submit">Trimite</button>
-
-          <!-- mesaj UX -->
-          <p id="formNote" class="form-note" aria-live="polite"></p>
-        </form>
       </div>
+    </section>
+  </main>
 
-      <!-- Dreapta: hartă + info -->
-      <aside class="contact-aside">
-        <div class="card map-card">
-          <h3>Ne găsești aici</h3>
-          <div class="map-wrap">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2713.251011834957!2d27.592501789433747!3d47.152938093319186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cafb99b7149e6d%3A0x6697aed06a12ed81!2sFacultatea%20de%20Inginerie%20Electric%C4%83%2C%20Energetic%C4%83%20%C8%99i%20Informatic%C4%83%20aplicat%C4%83!5e0!3m2!1sen!2sro!4v1478706427624"
-              width="100%" height="420" style="border:0;" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade" allowfullscreen
-              aria-label="Harta sediu IS Electroconsult">
-            </iframe>
-          </div>
-        </div>
+  <!-- FOOTER (partial) -->
+  <div data-include="partials/footer.html"></div>
 
-        <div class="card info-card">
-          <h3>Contact rapid</h3>
-          <div class="contact-info">
-            <a href="tel:+40232278683">📞 +40 232 278 683</a>
-            <a href="mailto:electroconsultgroup@gmail.com">✉️ electroconsultgroup@gmail.com</a>
-            <a href="https://wa.me/40232278683" target="_blank" rel="noopener">💬 WhatsApp</a>
-            <p>📍 Bulevardul Profesor Dimitrie Mangeron 21–23, Iași, RO</p>
-            <p>🕑 L–V: 09:00–17:00</p>
-          </div>
-        </div>
-      </aside>
-
-    </div>
-  </section>
-</main>
-
-<div data-include="partials/footer.html"></div>
-
-<!-- Scripturi (păstrează-le după conținut) -->
-<script defer src="js/include.js"></script>
-<script defer src="js/main.js"></script>
+  <!-- JS (ordinea corectă: întâi include partials, apoi scripturile site-ului) -->
+  <script defer src="js/include.js"></script>
+  <script defer src="js/main.js"></script>
+</body>
+</html>

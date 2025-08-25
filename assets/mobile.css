@@ -1038,4 +1038,15 @@
   .footer-contact span {
     font-size: 14px;
   }
+}/* ===== HEADER – spacer unic pe mobil ===== */
+@media (max-width: 768px) {
+  .header-spacer { height: 64px !important; } /* aceeași pe toate paginile */
+}/* ===== HEADER – aceeași lățime ca restul conținutului ===== */
+@media (max-width: 768px) {
+  :root { --mobile-col-width: 420px; }          /* 400–440 e ok */
+  .site-header .header-inner {
+    max-width: var(--mobile-col-width);
+    margin: 0 auto;
+    padding-inline: 12px;
+  }
 }
