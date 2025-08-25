@@ -683,7 +683,7 @@
     font-size: 1.3rem;          /* creștem fontul de bază */
     line-height: 1.65;
     padding: 50px 20px 100px;   /* mult spațiu sus și jos */
-    transform: scale(1.2);      /* efect de zoom global */
+    transform: scale(1.3);      /* efect de zoom global */
     transform-origin: top center;
   }
 
@@ -722,7 +722,7 @@
 
   /* Buton trimite mare, lat, ca un CTA principal */
   #contactForm .btn.btn-primary {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     padding: 20px;
     border-radius: 16px;
     width: 100%;
@@ -738,5 +738,304 @@
     font-size: 1.25rem;
     line-height: 1.6;
     margin: 10px 0;
+  }
+}/* ===== Contact – versiune mare pe mobil ===== */
+@media (max-width: 768px) {
+  .contact-page {
+    font-size: 1.4rem;        /* mult mai mare decât default */
+    line-height: 1.7;
+    padding: 60px 22px 120px;
+  }
+
+  /* Titlul & subtitlul foarte mari */
+  .contact-page .sec-title {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+  }
+  .contact-page .subtitle {
+    font-size: 1.35rem;
+    margin-bottom: 32px;
+    max-width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+  }
+
+  /* Carduri mari, ca pe mobile apps */
+  .contact-page .card {
+    padding: 32px 26px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    box-shadow: 0 12px 28px rgba(0,0,0,.12);
+  }
+
+  /* Inputuri / textarea mari */
+  #contactForm input,
+  #contactForm textarea {
+    font-size: 1.3rem;
+    padding: 20px;
+    min-height: 64px; /* mai mult decât 44px recomandat */
+    border-radius: 14px;
+  }
+  #contactForm textarea { min-height: 240px; }
+
+  /* Buton mare și lat */
+  #contactForm .btn.btn-primary {
+    font-size: 1.35rem;
+    padding: 22px;
+    border-radius: 16px;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  /* Hartă mare pentru scroll */
+  .map-wrap iframe { height: 400px; }
+
+  /* Info rapid foarte lizibil */
+  .contact-info a,
+  .contact-info p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin: 12px 0;
+  }
+}/* ===== ZOOM GLOBAL pe telefoane — TOT site-ul (≤768px) ===== */
+@media (max-width: 768px) {
+  /* 1) Bază tipografică mai mare (zoom natural) */
+  html { font-size: 18.5px; }           /* ~15–20% mai mare peste tot */
+  body { line-height: 1.7; }
+
+  /* 2) Container & spațiere */
+  .section.container,
+  .contact-page { padding: 52px 20px 96px; }
+
+  /* 3) HEADER (brand + burger + CTA) */
+  .site-header .header-inner { padding: 10px 14px; }
+  .brand img { height: 28px; width: auto; }       /* logo puțin mai mare */
+  .burger { width: 40px; height: 40px; gap: 4px; }
+  .burger span { height: 3px; }
+  .btn-cta {
+    padding: 12px 16px;
+    border-radius: 14px;
+    font-weight: 800;
+    min-height: 44px;                    /* ținte touch Apple */
+  }
+  .header-spacer { height: 70px; }       /* compensează header-ul mărit */
+
+  /* Mobile nav (când e deschis) — linkuri mari, ușor de atins */
+  .mobile-nav[aria-hidden="false"] a {
+    padding: 12px 14px;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    min-height: 44px;
+  }
+
+  /* 4) BUTTONS / CTA-uri în tot site-ul (inclusiv formulare) */
+  .btn, .btn.btn-primary, .btn-cta.ghost {
+    font-size: 1.1rem;
+    padding: 14px 18px;
+    border-radius: 14px;
+    min-height: 48px;
+  }
+
+  /* 5) FORME (global) */
+  input, textarea, select {
+    font-size: 1.05rem;
+    padding: 14px;
+    min-height: 48px;
+    border-radius: 12px;
+  }
+  textarea { min-height: 180px; }
+
+  /* 6) CONTACT — zoom & cadrare (mai mare decât restul) */
+  .contact-page .sec-title { font-size: 2.2rem; margin-bottom: 14px; }
+  .contact-page .subtitle  { font-size: 1.25rem; margin: 0 auto 22px; max-width: 720px; text-align: center; }
+  .contact-page .card { padding: 26px 20px; border-radius: 18px; margin-bottom: 28px; }
+  #contactForm .btn.btn-primary { font-size: 1.2rem; padding: 18px; border-radius: 16px; width: 100%; }
+  .map-wrap iframe { height: 360px; }     /* hartă mai înaltă */
+
+  /* 7) SERVICII – păstrăm scroll orizontal & butoane mici */
+  .srv-viewport { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding: 0 10px; }
+  .srv-row { gap: 16px; transform: none !important; }
+  .srv-card { flex: 0 0 80%; max-width: 360px; scroll-snap-align: start; }
+  .srv-btn { width: 32px; height: 32px; font-size: 18px; top: 45%; } /* dacă vrei și butoane pe mobil */
+
+  /* 8) PARTENERI — centrare pe mobil în pagina Servicii */
+  .services .partners { display:flex!important; justify-content:center; align-items:center; flex-wrap:wrap; gap:16px; padding:8px 0; }
+  .services .partners img { height: 30px; }
+
+  /* 9) FOOTER — zoom + stivă */
+  .footer-bar { padding: 20px 16px 28px; }
+  .footer-row { display:flex; flex-direction:column; gap:12px; text-align:center; align-items:center; }
+  .footer-item { font-size: 1.05rem; }
+  .footer-item .btn-book { padding: 12px 14px; border-radius: 12px; min-height: 44px; }
+  .footer-partners img { height: 30px; }
+  .footer-social img { height: 22px; width: auto; }
+}
+
+/* ===== Tablete (≤1024px) – puțin zoom, dar nu la fel de mare ca pe phone */
+@media (max-width: 1024px) and (min-width: 769px) {
+  html { font-size: 17px; }
+  .header-spacer { height: 68px; }
+  .footer-bar { padding: 24px 18px; }
+}/* ===== RESET: scoatem orice scale anterioare ===== */
+@media (max-width: 768px) {
+  .contact-page { transform: none !important; }  /* dacă ai pus scale înainte */
+}
+
+/* ===== VAR: lățime coloană mobil (schimbă 420px cum vrei) ===== */
+@media (max-width: 768px) {
+  :root { --mobile-col-width: 420px; } /* 400–440px e sweet spot */
+  html, body { overflow-x: hidden; }
+}
+
+/* ===== HEADER: aliniere & aceeași lățime ca pagina ===== */
+@media (max-width: 768px) {
+  .site-header .header-inner {
+    max-width: var(--mobile-col-width);
+    margin: 0 auto;
+    padding-inline: 12px;
+  }
+  .header-spacer { height: 70px; } /* ajustează dacă header-ul tău e mai înalt */
+  .brand img { height: 28px; width: auto; }           /* logo puțin mai mare */
+  .btn-cta { min-height: 44px; padding: 10px 14px; }  /* tap-friendly */
+  .burger { width: 40px; height: 40px; }
+}
+
+/* ===== CONȚINUT: coloană centrată, fără tăieturi ===== */
+@media (max-width: 768px) {
+  .section.container,
+  .contact-page .container {
+    width: 100%;
+    max-width: var(--mobile-col-width);
+    margin: 0 auto;
+    padding: 0 12px 80px; /* spațiu jos pentru scroll */
+    box-sizing: border-box;
+  }
+
+  /* Contact: o coloană + zoom tipografic sănătos */
+  .contact-page { padding-top: 40px; line-height: 1.65; font-size: 1.2rem; }
+  .contact-grid { display: block !important; }
+  .contact-page .card { width: 100%; max-width: 100%; margin: 0 0 24px; border-radius: 18px; padding: 24px 18px; }
+
+  .contact-page .sec-title { font-size: 2.1rem; margin-bottom: 12px; }
+  .contact-page .subtitle  { font-size: 1.2rem; text-align: center; margin: 0 auto 20px; max-width: 36ch; }
+
+  #contactForm .form-row { display: block; }
+  #contactForm input, #contactForm textarea {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 14px;
+    min-height: 52px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  #contactForm textarea { min-height: 190px; }
+  #contactForm .btn.btn-primary { width: 100%; font-size: 1.2rem; padding: 16px; border-radius: 14px; }
+
+  /* Hartă fluidă și încadrată în coloană */
+  .map-wrap { position: relative; width: 100%; padding-top: 56.25%; border-radius: 14px; overflow: hidden; }
+  .map-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+}
+
+/* ===== FOOTER: aceeași lățime și centrare ===== */
+@media (max-width: 768px) {
+  .footer-bar { padding: 20px 0 28px; }
+  .footer-row {
+    max-width: var(--mobile-col-width);
+    margin: 0 auto;
+    padding: 0 12px;
+    display: flex; flex-direction: column; gap: 12px; text-align: center; align-items: center;
+  }
+  .footer-item, .footer-item * { font-size: 1.05rem; }
+  .footer-partners img { height: 28px; }
+  .footer-social img { height: 22px; width: auto; }
+}@media (max-width: 768px) {
+  :root { --mobile-col-width: 420px; } /* poți pune 400–440px */
+
+  /* conținutul footerului pe aceeași coloană ca restul paginii */
+  .footer-row{
+    max-width: var(--mobile-col-width);
+    margin: 0 auto;
+    padding: 0 12px;
+    display:flex; flex-direction:column; gap:12px;
+    text-align:center; align-items:center;
+  }
+
+  /* textul din footer să nu “spargă” coloana */
+  .footer-item, .footer-item *{
+    overflow-wrap:anywhere;
+    text-wrap:pretty;
+    line-height:1.5;
+  }
+
+  /* butonul și iconițele – dimensiuni coerente */
+  .footer-item .btn-book{ min-height:44px; padding:10px 14px; border-radius:12px; }
+  .footer-social img{ height:22px; width:auto; }
+  .footer-partners img{ height:28px; }
+}@media (max-width: 768px) {
+  .footer-wave{
+    display:block;
+    height:36px;              /* ajustează după SVG/PNG-ul tău */
+    width:100vw;              /* întinde-l pe toată lățimea ecranului */
+    margin: 16px 0 0;
+    margin-left: calc(50% - 50vw); /* full-bleed aliniat perfect */
+  }
+  .footer-bar{ padding: 20px 0 28px; } /* conținutul rămâne în coloană */
+}@media (max-width: 768px) {
+  /* cardul cu hartă – margine consistentă jos */
+  .map-card{ margin-bottom: 20px !important; }
+
+  /* email/telefon/adresă – rânduri mai compacte, controlate */
+  .contact-info a, .contact-info p{
+    margin: 8px 0; font-size: 1.1rem; line-height: 1.5;
+  }
+
+  /* elimină orice scroll orizontal accidental */
+  html, body{ overflow-x: hidden; }
+}@media (max-width: 768px) {
+  /* blocul cu contact rapid din footer */
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* centrare orizontală */
+    justify-content: center;
+    text-align: center;        /* tot textul centrat */
+    gap: 8px;                  /* spațiu între rânduri */
+    width: 100%;
+  }
+
+  /* text + iconițe de contact */
+  .footer-contact span,
+  .footer-contact p {
+    display: block;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* să nu mai fie “bullets” ci rânduri curate */
+  .footer-contact span.dot,
+  .footer-contact span.separator {
+    display: none;
+  }
+
+  /* adresă și program mai lizibile */
+  .footer-contact p {
+    font-size: 1.1rem;
+    margin-top: 4px;
+  }
+
+  /* linkuri (telefon, mail) clare și centrate */
+  .footer-contact a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+}@media (max-width: 768px) {
+  .footer-contact span {
+    font-size: 14px;
   }
 }
