@@ -1205,7 +1205,7 @@
     max-width: 420px; margin: 0 auto;
   }
   .header-actions{ display: contents; }
-  .brand img{ height: 28px; width: auto; }
+  .brand img{ height: 70px; width: 70px; }
 
   .header-actions .btn-cta{
     grid-column: 3; justify-self: end;
