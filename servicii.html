@@ -13,76 +13,124 @@
   <script defer src="js/main.js"></script>
 </head>
 <body>
+  <!-- Include header (NU pune markup-ul headerului aici) -->
   <div data-include="partials/header.html"></div>
+  <div class="header-spacer"></div>
 
-  <section class="services section container" id="servicii" data-aos="fade-up">
-  <h2>Serviciile noastre</h2>
-  <p class="subtitle">Soluții electrice complete — proiectare, audit, execuție, mentenanță și consultanță.</p>
+  <main>
+    <section class="services section container" id="servicii" data-aos="fade-up">
+      <header class="section-head">
+        <h2>Serviciile noastre</h2>
+        <p class="subtitle">Soluții electrice complete — proiectare, audit, execuție, mentenanță și consultanță.</p>
+        <a href="contact.html" class="btn-cta">📅 Cere ofertă</a>
+      </header>
 
-    <a href="contact.html" class="btn-cta">📅 Cere ofertă</a>
-  </div>
-  <div class="srv-slider">
-    <button class="srv-btn srv-prev" aria-label="Anterior">‹</button>
+      <!-- Slider servicii -->
+      <div class="srv-slider" aria-label="Slider servicii">
+        <button class="srv-btn srv-prev" aria-label="Anterior">‹</button>
 
-    <div class="srv-viewport" aria-live="polite">
-      <div class="srv-row">
-        <article class="srv-card">
-          <h3>📐 Proiectare tehnică</h3>
-          <ul class="srv-list">
-            <li>Basic — <b>600 lei</b></li>
-            <li>Standard — <b>1200 lei</b></li>
-            <li>Avansat — <b>2500 lei</b></li>
-          </ul>
-        </article>
+        <div class="srv-viewport" aria-live="polite">
+          <div class="srv-row">
+            <article class="srv-card">
+              <h3>📐 Proiectare tehnică</h3>
+              <ul class="srv-list">
+                <li>Basic — <b>600 lei</b></li>
+                <li>Standard — <b>1200 lei</b></li>
+                <li>Avansat — <b>2500 lei</b></li>
+              </ul>
+            </article>
 
-        <article class="srv-card">
-          <h3>🔍 Audit energetic</h3>
-          <p>Evaluare și recomandări clare pentru optimizare.</p>
-          <p class="price"><b>300 lei</b></p>
-        </article>
+            <article class="srv-card">
+              <h3>🔍 Audit energetic</h3>
+              <p>Evaluare și recomandări clare pentru optimizare.</p>
+              <p class="price"><b>300 lei</b></p>
+            </article>
 
-        <article class="srv-card">
-          <h3>⚡ Audit instalații electrice</h3>
-          <ul class="srv-list">
-            <li>Simple — <b>200 lei</b></li>
-            <li>Complex — <b>800 lei</b></li>
-          </ul>
-        </article>
+            <article class="srv-card">
+              <h3>⚡ Audit instalații electrice</h3>
+              <ul class="srv-list">
+                <li>Simple — <b>200 lei</b></li>
+                <li>Complex — <b>800 lei</b></li>
+              </ul>
+            </article>
 
-        <article class="srv-card">
-          <h3>🛠️ Mentenanță & suport</h3>
-          <p>Întreținere periodică și intervenții rapide.</p>
-          <p class="price"><b>200 lei</b></p>
-        </article>
+            <article class="srv-card">
+              <h3>🛠️ Mentenanță &amp; suport</h3>
+              <p>Întreținere periodică și intervenții rapide.</p>
+              <p class="price"><b>200 lei</b></p>
+            </article>
 
-        <article class="srv-card">
-          <h3>🔌 Montaj panou electric</h3>
-          <p>Montaj profesionist pentru siguranță și eficiență.</p>
-          <p class="price"><b>1300 lei</b></p>
-        </article>
+            <article class="srv-card">
+              <h3>🔌 Montaj panou electric</h3>
+              <p>Montaj profesionist pentru siguranță și eficiență.</p>
+              <p class="price"><b>1300 lei</b></p>
+            </article>
 
-        <article class="srv-card">
-          <h3>💡 Consultanță echipamente</h3>
-          <p>Alegerea soluțiilor optime pentru proiectul tău.</p>
-          <p class="price"><b>500 lei</b></p>
-        </article>
+            <article class="srv-card">
+              <h3>💡 Consultanță echipamente</h3>
+              <p>Alegerea soluțiilor optime pentru proiectul tău.</p>
+              <p class="price"><b>500 lei</b></p>
+            </article>
 
-        <article class="srv-card">
-          <h3>🔎 Verificare aparat electric</h3>
-          <p>Diagnosticare rapidă și verificare siguranță.</p>
-          <p class="price"><b>250 lei</b></p>
-        </article>
+            <article class="srv-card">
+              <h3>🔎 Verificare aparat electric</h3>
+              <p>Diagnosticare rapidă și verificare siguranță.</p>
+              <p class="price"><b>250 lei</b></p>
+            </article>
+          </div>
+        </div>
+
+        <button class="srv-btn srv-next" aria-label="Următor">›</button>
       </div>
-    </div>
 
-    <button class="srv-btn srv-next" aria-label="Următor">›</button>
-  </div>
+      <!-- CTA secundar + Parteneri prin partial -->
+      <div class="services-cta">
+        <a href="contact.html" class="btn-cta ghost">Solicită consultanță</a>
+      </div>
 
-  <div class="services-cta">
-    
-    <div data-include="partials/parteners.html"></div>
-  </section>
+      <!-- Include parteneri (NU lipi HTML-ul aici) -->
+      <div data-include="partials/parteners.html"></div>
+    </section>
+  </main>
 
+  <!-- Include footer (NU pune markup-ul footerului aici) -->
   <div data-include="partials/footer.html"></div>
+
+  <!-- Scripturile site-ului -->
+  <script defer src="js/include.js"></script>
+  <script defer src="js/main.js"></script>
+
+  <!-- Slider logic minim (vanilla) -->
+  <script>
+    (function() {
+      const viewport = document.querySelector('.srv-viewport');
+      const row = document.querySelector('.srv-row');
+      const prev = document.querySelector('.srv-prev');
+      const next = document.querySelector('.srv-next');
+      if (!viewport || !row || !prev || !next) return;
+
+      let cardWidth = 0, gap = 0, x = 0;
+
+      const measure = () => {
+        const card = row.querySelector('.srv-card');
+        const style = card ? getComputedStyle(card) : null;
+        cardWidth = card ? card.offsetWidth : 0;
+        gap = style ? parseFloat(style.marginRight) : 24;
+      };
+
+      const maxScroll = () => Math.max(0, row.scrollWidth - viewport.clientWidth);
+
+      const go = (dir = 1) => {
+        const step = Math.max(cardWidth + gap, viewport.clientWidth * 0.6);
+        x = Math.min(Math.max(0, x + dir * step), maxScroll());
+        row.style.transform = `translateX(${-x}px)`;
+      };
+
+      prev.addEventListener('click', () => go(-1));
+      next.addEventListener('click', () => go(1));
+      window.addEventListener('resize', () => { measure(); x = Math.min(x, maxScroll()); row.style.transform = `translateX(${-x}px)`; });
+
+      measure();
+    })();
+  </script>
 </body>
-</html>

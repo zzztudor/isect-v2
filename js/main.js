@@ -278,4 +278,85 @@ if (mql.addEventListener) {
       */
     });
   });
+})();// === Slider Servicii (desktop-first) ===
+(function () {
+  const viewport = document.querySelector('.srv-viewport');
+  const row      = document.querySelector('.srv-row');
+  const prev     = document.querySelector('.srv-prev');
+  const next     = document.querySelector('.srv-next');
+
+  // Rulează doar pe paginile care au slider
+  if (!viewport || !row || !prev || !next) return;
+
+  let x = 0;          // poziția curentă
+  let step = 0;       // pasul la click
+  let gapPx = 24;     // fallback pentru gap
+
+  function measure() {
+    const firstCard = row.querySelector('.srv-card');
+    if (firstCard) {
+      const csRow = getComputedStyle(row);
+      const cg = csRow.columnGap || csRow.gap || '24px';
+      gapPx = parseFloat(cg) || 24;
+
+      const cardW = firstCard.offsetWidth || 0;
+      step = Math.max(cardW + gapPx, viewport.clientWidth * 0.6);
+    } else {
+      step = viewport.clientWidth * 0.6;
+    }
+  }
+
+  function maxScroll() {
+    return Math.max(0, row.scrollWidth - viewport.clientWidth);
+  }
+
+  function setX(value) {
+    const m = maxScroll();
+    x = Math.min(Math.max(0, value), m);
+    row.style.transform = 'translateX(' + (-Math.round(x)) + 'px)';
+  }
+
+  function toggleNoScroll() {
+    if (row.scrollWidth <= viewport.clientWidth + 1) {
+      row.classList.add('no-scroll');
+      setX(0);
+    } else {
+      row.classList.remove('no-scroll');
+    }
+  }
+
+  function centerStart() {
+    const m = maxScroll();
+    if (m > 0) setX(m / 2);
+    else setX(0);
+  }
+
+  function go(dir) {
+    setX(x + dir * step);
+  }
+
+  function init() {
+    measure();
+    toggleNoScroll();
+    centerStart();
+  }
+
+  prev.addEventListener('click', function () { go(-1); });
+  next.addEventListener('click', function () { go(1); });
+
+  let rAF;
+  window.addEventListener('resize', function () {
+    cancelAnimationFrame(rAF);
+    rAF = requestAnimationFrame(function () {
+      measure();
+      toggleNoScroll();
+      setX(Math.min(x, maxScroll()));
+    });
+  });
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })();
