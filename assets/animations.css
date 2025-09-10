@@ -223,7 +223,7 @@
 
 /* Text care apare cu delay */
 .text-reveal {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(20px);
   transition: all 0.6s var(--animation-easing);
 }
@@ -280,7 +280,7 @@
 
 /* Efect de fade pentru slide-uri */
 .slide-fade {
-  opacity: 0;
+  opacity: 1;
   transform: translateX(30px);
   transition: all 0.4s var(--animation-easing);
 }
