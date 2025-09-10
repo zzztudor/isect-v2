@@ -498,7 +498,7 @@ section h2::after {
   width: 80px; height: 80px; object-fit: cover; border-radius: 50%;
   margin-bottom: 10px;
 }
-.team-card h3{ margin: 6px 0 4px; font-size: 18px; }
+.team-card h3{ margin: 6px 6 4px; font-size: 18px; }
 .team-card p{ margin: 0; color:#64748b; font-size: 14px; }
 
 /* butoane nav */
@@ -531,7 +531,7 @@ section h2::after {
   position:relative;
 }
 .card-xl h3::after{
-  content:""; position:absolute; left:0; bottom:-10px; height:3px; width:64px;
+  content:""; position:absolute; left:0; bottom:-2px; height:3px; width:64px;
   background:#007acc; border-radius:2px; opacity:.85;
 }
 .card-icon{
