@@ -19,49 +19,50 @@
   <link rel="stylesheet" href="assets/components.css" />
   <link rel="stylesheet" href="assets/dark.css" />
   <link rel="stylesheet" href="assets/mobile.css" />
+  <link rel="stylesheet" href="assets/animations.css" />
 </head>
 <body>
   <!-- HEADER din partial -->
   <div data-include="partials/header.html"></div>
 
-  <!-- BANDĂ „Despre noi” -->
- <section class="container about-band">
-  <h2>Despre noi</h2>
-  <p class="lead">Continuăm misiunea ta: soluții electrice eficiente, sigure și moderne.</p>
+  <!-- BANDĂ „Despre noi" -->
+ <section class="container about-band animate-on-scroll slide-up">
+  <h2 class="animate-on-scroll text-reveal">Despre noi</h2>
+  <p class="lead animate-on-scroll slide-up" data-delay="200">Continuăm misiunea ta: soluții electrice eficiente, sigure și moderne.</p>
 
   <!-- Mutat aici sub subheading -->
-  <div class="values">
-    <span class="chip">Calitate</span>
-    <span class="chip">Siguranță</span>
-    <span class="chip">Eficiență</span>
+  <div class="values animate-on-scroll scale-in" data-delay="400">
+    <span class="chip animate-on-scroll slide-left" data-delay="600">Calitate</span>
+    <span class="chip animate-on-scroll slide-up" data-delay="700">Siguranță</span>
+    <span class="chip animate-on-scroll slide-right" data-delay="800">Eficiență</span>
   </div>
 
       
     </header>
 
     <div class="about-grid">
-      <article class="card-xl" data-aos="fade-up">
-        <h3><span class="card-icon">🛠️</span>Misiune</h3>
+      <article class="card-xl animate-on-scroll slide-left card-3d card-glow" data-aos="fade-up" data-delay="200">
+        <h3><span class="card-icon icon-spin">🛠️</span>Misiune</h3>
         <p>Întreprindere simulată de studenți, concentrată pe soluții electrice moderne, sigure și eficiente.</p>
       </article>
 
-      <article class="card-xl" data-aos="fade-up" data-aos-delay="120">
-        <h3><span class="card-icon">🚀</span>Viziune</h3>
+      <article class="card-xl animate-on-scroll slide-right card-3d card-glow" data-aos="fade-up" data-aos-delay="120" data-delay="400">
+        <h3><span class="card-icon icon-spin">🚀</span>Viziune</h3>
         <p>Clădiri inteligente, consum optimizat și confort digital — cu un ROI real.</p>
       </article>
     </div>
   </section>
 
   <!-- KPI bar -->
-  <div class="kpi-bar" data-aos="fade-up">
-    <div class="kpi"><b>150+</b><span>proiecte finalizate</span></div>
-    <div class="kpi"><b>98%</b><span>clienți mulțumiți</span></div>
-    <div class="kpi"><b>10 ani</b><span>experiență cumulată</span></div>
+  <div class="kpi-bar animate-on-scroll slide-up" data-aos="fade-up">
+    <div class="kpi animate-on-scroll scale-in card-3d card-glow" data-delay="200"><b>150+</b><span>proiecte finalizate</span></div>
+    <div class="kpi animate-on-scroll scale-in card-3d card-glow" data-delay="400"><b>98%</b><span>clienți mulțumiți</span></div>
+    <div class="kpi animate-on-scroll scale-in card-3d card-glow" data-delay="600"><b>10 ani</b><span>experiență cumulată</span></div>
   </div>
 
   <!-- Echipa (slider) -->
-  <section class="section container" data-aos="fade-up">
-    <h2 class="sec-title">Echipa</h2>
+  <section class="section container animate-on-scroll slide-up" data-aos="fade-up">
+    <h2 class="sec-title animate-on-scroll text-reveal">Echipa</h2>
 
     <div class="team-slider">
       <button class="ts-btn ts-prev" aria-label="Anterior">‹</button>
@@ -96,5 +97,6 @@
   <!-- JS la final -->
   <script defer src="js/include.js"></script>
   <script defer src="js/main.js"></script>
+  <script defer src="js/animations.js"></script>
 </body>
 </html>

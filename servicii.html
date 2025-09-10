@@ -19,17 +19,18 @@
   <link rel="stylesheet" href="assets/components.css" />
   <link rel="stylesheet" href="assets/dark.css" />
   <link rel="stylesheet" href="assets/mobile.css" /> <!-- ultimul -->
+  <link rel="stylesheet" href="assets/animations.css" />
 </head>
 <body>
   <!-- HEADER (partial) — nu mai pune markup aici -->
   <div data-include="partials/header.html"></div>
 
   <main id="main">
-    <section class="services section container" id="servicii" data-aos="fade-up">
+    <section class="services section container animate-on-scroll slide-up" id="servicii" data-aos="fade-up">
       <header class="section-head">
-        <h1 class="sec-title">Serviciile noastre</h1>
-        <p class="subtitle">Soluții electrice complete — proiectare, audit, execuție, mentenanță și consultanță.</p>
-        <a href="contact.html" class="btn-cta">📅 Cere ofertă</a>
+        <h1 class="sec-title animate-on-scroll text-reveal">Serviciile noastre</h1>
+        <p class="subtitle animate-on-scroll slide-up" data-delay="200">Soluții electrice complete — proiectare, audit, execuție, mentenanță și consultanță.</p>
+        <a href="contact.html" class="btn-cta btn-ripple btn-glow animate-on-scroll scale-in" data-delay="400">📅 Cere ofertă</a>
       </header>
 
       <!-- Slider servicii (controlat din js/main.js) -->
@@ -91,8 +92,8 @@
       </div>
 
       <!-- CTA secundar -->
-      <div class="services-cta">
-        <a href="contact.html" class="btn-cta ghost">Solicită consultanță</a>
+      <div class="services-cta animate-on-scroll slide-up" data-delay="600">
+        <a href="contact.html" class="btn-cta ghost btn-ripple btn-glow">Solicită consultanță</a>
       </div>
 
       <!-- Parteneri (partial) -->
@@ -106,5 +107,6 @@
   <!-- JS (include partiale, apoi scripturile site-ului) -->
   <script defer src="js/include.js"></script>
   <script defer src="js/main.js"></script>
+  <script defer src="js/animations.js"></script>
 </body>
 </html>

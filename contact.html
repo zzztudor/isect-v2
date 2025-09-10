@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="assets/layout.css">
   <link rel="stylesheet" href="assets/components.css">
   <link rel="stylesheet" href="assets/mobile.css"><!-- ultimul -->
+  <link rel="stylesheet" href="assets/animations.css">
 </head>
 <body>
 
@@ -26,13 +27,13 @@
   <div data-include="partials/header.html"></div>
 
   <main id="main" tabindex="-1">
-    <section id="contact" class="contact-page">
+    <section id="contact" class="contact-page animate-on-scroll slide-up">
       <div class="container contact-grid">
 
         <!-- Stânga: formular -->
-        <div class="card contact-card">
-          <h1 class="sec-title">Contact</h1>
-          <p class="subtitle">Scrie-ne câteva detalii și revenim rapid cu răspunsul sau oferta potrivită.</p>
+        <div class="card contact-card animate-on-scroll slide-left card-3d card-glow" data-delay="200">
+          <h1 class="sec-title animate-on-scroll text-reveal">Contact</h1>
+          <p class="subtitle animate-on-scroll slide-up" data-delay="400">Scrie-ne câteva detalii și revenim rapid cu răspunsul sau oferta potrivită.</p>
 
           <form id="contactForm" novalidate>
             <div class="form-row">
@@ -55,7 +56,7 @@
             <!-- honeypot anti-bot (ascuns) -->
             <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-            <button class="btn btn-primary" type="submit">Trimite</button>
+            <button class="btn btn-primary btn-ripple btn-glow" type="submit">Trimite</button>
 
             <!-- mesaj UX -->
             <p id="formNote" class="form-note" aria-live="polite"></p>
@@ -64,9 +65,9 @@
 
         <!-- Dreapta: hartă + info -->
         <aside class="contact-aside">
-          <div class="card map-card">
-            <h2>Ne găsești aici</h2>
-            <div class="map-wrap">
+          <div class="card map-card animate-on-scroll slide-right card-3d card-glow" data-delay="400">
+            <h2 class="animate-on-scroll text-reveal">Ne găsești aici</h2>
+            <div class="map-wrap animate-on-scroll scale-in" data-delay="600">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2713.251011834957!2d27.592501789433747!3d47.152938093319186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cafb99b7149e6d%3A0x6697aed06a12ed81!2sFacultatea%20de%20Inginerie%20Electric%C4%83%2C%20Energetic%C4%83%20%C8%99i%20Informatic%C4%83%20aplicat%C4%83!5e0!3m2!1sen!2sro!4v1478706427624"
                 width="100%" height="420" style="border:0;" loading="lazy"
@@ -76,12 +77,12 @@
             </div>
           </div>
 
-          <div class="card info-card">
-            <h2>Contact rapid</h2>
-            <div class="contact-info">
-              <a href="tel:+40232278683">📞 +40 232 278 683</a>
-              <a href="mailto:electroconsultgroup@gmail.com">✉️ electroconsultgroup@gmail.com</a>
-              <a href="https://wa.me/40232278683" target="_blank" rel="noopener">💬 WhatsApp</a>
+          <div class="card info-card animate-on-scroll slide-right card-3d card-glow" data-delay="600">
+            <h2 class="animate-on-scroll text-reveal">Contact rapid</h2>
+            <div class="contact-info animate-on-scroll slide-up" data-delay="800">
+              <a href="tel:+40232278683" class="icon-scale">📞 +40 232 278 683</a>
+              <a href="mailto:electroconsultgroup@gmail.com" class="icon-scale">✉️ electroconsultgroup@gmail.com</a>
+              <a href="https://wa.me/40232278683" target="_blank" rel="noopener" class="icon-scale">💬 WhatsApp</a>
               <p>📍 Bulevardul Profesor Dimitrie Mangeron 21–23, Iași, RO</p>
               <p>🕑 L–V: 09:00–17:00</p>
             </div>
@@ -98,5 +99,6 @@
   <!-- JS (ordinea corectă: întâi include partials, apoi scripturile site-ului) -->
   <script defer src="js/include.js"></script>
   <script defer src="js/main.js"></script>
+  <script defer src="js/animations.js"></script>
 </body>
 </html>

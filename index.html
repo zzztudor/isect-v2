@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="assets/components.css" />
   <link rel="stylesheet" href="assets/dark.css" />
   <link rel="stylesheet" href="assets/mobile.css" /> <!-- ← calea corectă -->
+  <link rel="stylesheet" href="assets/animations.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 </head>
 <body>
@@ -28,23 +29,23 @@
   <div data-include="partials/header.html"></div>
 
   <!-- HERO -->
-  <section class="hero hero--bg" data-aos="fade-up">
+  <section class="hero hero--bg animate-on-scroll slide-up" data-aos="fade-up">
     <div class="container">
       <div class="hero__content">
-        <div class="badge">⚡ Soluții electrice & automatizări</div>
-        <h1>Gândim soluții. Instalăm încredere.</h1>
-        <p class="lead">
+        <div class="badge animate-on-scroll scale-in" data-delay="200">⚡ Soluții electrice & automatizări</div>
+        <h1 class="animate-on-scroll text-reveal" data-delay="400">Gândim soluții. Instalăm încredere.</h1>
+        <p class="lead animate-on-scroll slide-up" data-delay="600">
           Întreprindere simulată creată de studenți, cu misiunea de a oferi soluții electrice moderne,
           sigure și eficiente.
         </p>
-        <div class="cta">
-          <a class="btn btn-primary" href="servicii.html">Vezi pachetele</a>
-          <a class="btn btn-ghost" href="contact.html">Cere ofertă</a>
+        <div class="cta animate-on-scroll slide-up" data-delay="800">
+          <a class="btn btn-primary btn-ripple btn-glow" href="servicii.html">Vezi pachetele</a>
+          <a class="btn btn-ghost btn-ripple" href="contact.html">Cere ofertă</a>
         </div>
-        <ul class="hero__bullets chips">
-          <li>Proiectare tehnică conform normelor</li>
-          <li>Automatizări smart home & clădiri</li>
-          <li>Audit energetic cu recomandări clare</li>
+        <ul class="hero__bullets chips animate-on-scroll slide-up" data-delay="1000">
+          <li class="animate-on-scroll slide-left" data-delay="1200">Proiectare tehnică conform normelor</li>
+          <li class="animate-on-scroll slide-left" data-delay="1400">Automatizări smart home & clădiri</li>
+          <li class="animate-on-scroll slide-left" data-delay="1600">Audit energetic cu recomandări clare</li>
         </ul>
       </div>
     </div>
@@ -56,20 +57,20 @@
   </section>
 
   <!-- FEATURES -->
-  <section class="features-wrap" data-aos="fade-up">
+  <section class="features-wrap animate-on-scroll slide-up" data-aos="fade-up">
     <div class="container section">
-      <h2>Tot ce ai nevoie într-un singur loc</h2>
+      <h2 class="animate-on-scroll text-reveal">Tot ce ai nevoie într-un singur loc</h2>
       <div class="grid features">
-        <article class="card service-card">
-          <h3>🔧 Proiectare instalații</h3>
+        <article class="card service-card animate-on-scroll slide-up card-3d card-glow" data-delay="200">
+          <h3 class="icon-spin">🔧 Proiectare instalații</h3>
           <p>Planuri clare, dimensionări precise și documentații complete 📐 — pentru siguranță și eficiență.</p>
         </article>
-        <article class="card service-card">
-          <h3>⚡ Automatizări</h3>
+        <article class="card service-card animate-on-scroll slide-up card-3d card-glow" data-delay="400">
+          <h3 class="icon-spin">⚡ Automatizări</h3>
           <p>Controlezi luminile, senzorii și scenariile dintr-o singură aplicație 📱 — smart & simplu.</p>
         </article>
-        <article class="card service-card">
-          <h3>🌍 Audit energetic</h3>
+        <article class="card service-card animate-on-scroll slide-up card-3d card-glow" data-delay="600">
+          <h3 class="icon-spin">🌍 Audit energetic</h3>
           <p>Reduci costurile și consumul 🔋 — analize clare și recomandări cu ROI real.</p>
         </article>
       </div>
@@ -91,13 +92,13 @@
   </section>
 
   <!-- TESTIMONIALE -->
-  <section id="feedback" class="section">
+  <section id="feedback" class="section animate-on-scroll slide-up">
     <div class="container">
-      <h2 class="sec-title">Feedback de la clienți</h2>
+      <h2 class="sec-title animate-on-scroll text-reveal">Feedback de la clienți</h2>
       <div class="t-grid">
-        <article class="t-card" data-rating="5">
+        <article class="t-card animate-on-scroll slide-left card-3d card-glow" data-rating="5" data-delay="200">
           <div class="t-stars"></div>
-          <p class="t-text">„Rapid și profesionist.”</p>
+          <p class="t-text">„Rapid și profesionist."</p>
           <div class="t-author">
             <img class="t-avatar" src="img/pershold.png" alt="">
             <div>
@@ -106,9 +107,9 @@
             </div>
           </div>
         </article>
-        <article class="t-card" data-rating="5">
+        <article class="t-card animate-on-scroll slide-right card-3d card-glow" data-rating="5" data-delay="400">
           <div class="t-stars"></div>
-          <p class="t-text">„Automatizări impecabile.”</p>
+          <p class="t-text">„Automatizări impecabile."</p>
           <div class="t-author">
             <img class="t-avatar" src="img/pershold.png" alt="">
             <div>
@@ -222,5 +223,6 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script defer src="js/include.js"></script>
   <script defer src="js/main.js"></script>
+  <script defer src="js/animations.js"></script>
 </body>
 </html>
