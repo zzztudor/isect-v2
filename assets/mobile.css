@@ -5,19 +5,32 @@
 
 /* ---------- Large tablets / small laptops (≤1200px) ---------- */
 @media (max-width: 1200px) {
-  .section.container { max-width: 1040px; padding: 40px 16px 64px; }
-  .contact-page { padding: 40px 16px 64px; }
-  .map-wrap iframe { height: 440px; }
+  .section.container {
+    max-width: 1040px;
+    padding: 40px 16px 64px;
+  }
+  .contact-page {
+    padding: 40px 16px 64px;
+  }
+  .map-wrap iframe {
+    height: 440px;
+  }
 }
 
 /* ---------- Tablets (≤1024px) ---------- */
 @media (max-width: 1024px) {
   /* Header */
-  .site-header .main-nav { display: none; } /* ascundem meniul desktop */
-  .burger { display: inline-grid; }
+  .site-header .main-nav {
+    display: none;
+  } /* ascundem meniul desktop */
+  .burger {
+    display: inline-grid;
+  }
 
   /* Mobile nav: control prin aria-hidden */
-  .mobile-nav[aria-hidden="true"] { display: none; }
+  .mobile-nav[aria-hidden="true"] {
+    display: none;
+  }
   .mobile-nav[aria-hidden="false"] {
     display: grid;
     gap: 12px;
@@ -25,14 +38,25 @@
     background: var(--card);
     box-shadow: var(--shadow);
     position: absolute;
-    left: 0; right: 0; top: 100%;
+    left: 0;
+    right: 0;
+    top: 100%;
     border-radius: 0 0 var(--radius) var(--radius);
   }
-  .mobile-nav a { padding: 10px 12px; border-radius: 10px; background: transparent; }
+  .mobile-nav a {
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: transparent;
+  }
 
   /* Titlu + subtitlu centrate */
-  .section-head { grid-template-columns: 1fr; text-align: center; }
-  .section-head .btn-cta { justify-self: center; }
+  .section-head {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .section-head .btn-cta {
+    justify-self: center;
+  }
   .services .subtitle,
   .section-head .subtitle {
     text-align: center;
@@ -41,48 +65,87 @@
     color: var(--muted);
   }
 
-  
-
   /* Contact – coloană unică și fără sticky */
-  .contact-grid { grid-template-columns: 1fr; gap: 20px; }
-  .contact-aside { position: static; top: auto; }
-  .map-wrap iframe { height: 380px; }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .contact-aside {
+    position: static;
+    top: auto;
+  }
+  .map-wrap iframe {
+    height: 380px;
+  }
 
   /* Parteneri – grilă compactă */
-  .partners { gap: 20px; justify-content: center; }
-  .partners img { height: 36px; }
+  .partners {
+    gap: 20px;
+    justify-content: center;
+  }
+  .partners img {
+    height: 36px;
+  }
 
   /* Footer */
-  .footer-row { gap: 16px; }
+  .footer-row {
+    gap: 16px;
+  }
 }
 
 /* ---------- Medium tablets / large phones (≤900px) ---------- */
 @media (max-width: 900px) {
-  .section.container { max-width: 820px; }
-  .srv-card { min-width: 320px; }
+  .section.container {
+    max-width: 820px;
+  }
+  .srv-card {
+    min-width: 320px;
+  }
 }
 
 /* ---------- Phones (≤768px) ---------- */
 @media (max-width: 768px) {
   /* Container & tipografie */
-  .section.container { padding: 28px 14px 52px; }
-  .sec-title { font-size: 1.75rem; line-height: 1.25; }
-  .subtitle { font-size: 1rem; }
+  .section.container {
+    padding: 28px 14px 52px;
+  }
+  .sec-title {
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
 
   /* Header spacing */
-  .header-spacer { height: 64px; } /* ajustează dacă header-ul tău e mai înalt */
+  .header-spacer {
+    height: 64px;
+  } /* ajustează dacă header-ul tău e mai înalt */
 
   /* CTA-uri */
-  .btn-cta, .btn.btn-primary { padding: 12px 16px; font-weight: 700; }
+  .btn-cta,
+  .btn.btn-primary {
+    padding: 12px 16px;
+    font-weight: 700;
+  }
 
- 
   /* Contact */
-  #contactForm .form-row { grid-template-columns: 1fr; gap: 10px; }
-  #contactForm label { font-weight: 600; }
-  .map-wrap iframe { height: 320px; }
+  #contactForm .form-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  #contactForm label {
+    font-weight: 600;
+  }
+  .map-wrap iframe {
+    height: 320px;
+  }
 
   /* Info rapid */
-  .contact-info a, .contact-info p { margin: 6px 0; }
+  .contact-info a,
+  .contact-info p {
+    margin: 6px 0;
+  }
 
   /* Parteneri – rând scrollabil orizontal */
   .partners {
@@ -95,10 +158,17 @@
     gap: 16px;
     scrollbar-width: thin;
   }
-  .partners::-webkit-scrollbar { height: 6px; }
-  .partners::-webkit-scrollbar-thumb { background: rgba(0,0,0,.15); border-radius: 999px; }
-  .partners img { height: 28px; }
-  
+  .partners::-webkit-scrollbar {
+    height: 6px;
+  }
+  .partners::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 999px;
+  }
+  .partners img {
+    height: 28px;
+  }
+
   /* Footer stivă + centrat */
   .footer-row {
     display: flex;
@@ -107,27 +177,45 @@
     text-align: center;
     align-items: center;
   }
-  .footer-item { width: 100%; }
-  .footer-partners img { height: 28px; }
+  .footer-item {
+    width: 100%;
+  }
+  .footer-partners img {
+    height: 28px;
+  }
 }
 
 /* ---------- Small phones (≤480px) ---------- */
 @media (max-width: 480px) {
-  .sec-title { font-size: 1.55rem; }
-  .subtitle { font-size: .95rem; }
+  .sec-title {
+    font-size: 1.55rem;
+  }
+  .subtitle {
+    font-size: 0.95rem;
+  }
 
-  .btn-cta, .btn.btn-primary { width: 100%; text-align: center; }
-  #contactForm textarea { min-height: 140px; }
+  .btn-cta,
+  .btn.btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+  #contactForm textarea {
+    min-height: 140px;
+  }
 
-  .partners { gap: 12px; }
-}/* ===== Consistență cu Index – Telefoane (≤768px) ===== */
+  .partners {
+    gap: 12px;
+  }
+} /* ===== Consistență cu Index – Telefoane (≤768px) ===== */
 @media (max-width: 768px) {
   /* Cap secțiune (titlu + subtitlu + CTA), ca pe index */
   .section,
-  .contact-page { padding: 28px 14px 52px; }
+  .contact-page {
+    padding: 28px 14px 52px;
+  }
 
   .section-head,
-  .contact-page .contact-card > .sec-title, 
+  .contact-page .contact-card > .sec-title,
   .contact-page .contact-card > .subtitle {
     text-align: center;
   }
@@ -145,62 +233,112 @@
   /* CTA centrat */
   .section-head .btn-cta,
   .services-cta,
-  .contact-page .btn.btn-primary { 
-    display: flex; justify-content: center; 
+  .contact-page .btn.btn-primary {
+    display: flex;
+    justify-content: center;
   }
-
 
   /* Spațiere între cap secțiune și listă, ca pe index */
-  .srv-slider { margin-top: 12px; }
+  .srv-slider {
+    margin-top: 12px;
+  }
 
   /* ===== CONTACT – o singură coloană ===== */
-  .contact-grid { 
-    display: grid; grid-template-columns: 1fr; gap: 18px;
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
-  .contact-aside { position: static !important; top: auto !important; }
-  #contactForm .form-row { grid-template-columns: 1fr; gap: 10px; }
+  .contact-aside {
+    position: static !important;
+    top: auto !important;
+  }
+  #contactForm .form-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 
   /* Ordine logică pe mobil: titlu/subtitlu → info → form → hartă */
-  .contact-page .contact-card { order: 2; }
-  .contact-page .contact-aside .info-card { order: 1; }
-  .contact-page .map-card { order: 3; }
+  .contact-page .contact-card {
+    order: 2;
+  }
+  .contact-page .contact-aside .info-card {
+    order: 1;
+  }
+  .contact-page .map-card {
+    order: 3;
+  }
 
-  .map-wrap iframe { height: 320px; border: 0; border-radius: var(--radius); }
+  .map-wrap iframe {
+    height: 320px;
+    border: 0;
+    border-radius: var(--radius);
+  }
 
   /* ===== Parteneri – bandă scroll orizontal (ca pe index) ===== */
   .partners {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    overflow-x: auto; gap: 16px; padding: 6px 2px 6px 2px;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 6px 2px 6px 2px;
     scrollbar-width: thin;
   }
-  .partners::-webkit-scrollbar { height: 6px; }
-  .partners::-webkit-scrollbar-thumb { background: rgba(0,0,0,.15); border-radius: 999px; }
-  .partners img { height: 28px; }
+  .partners::-webkit-scrollbar {
+    height: 6px;
+  }
+  .partners::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 999px;
+  }
+  .partners img {
+    height: 28px;
+  }
 
   /* ===== Footer – stivă centrată (ca pe index) ===== */
   .footer-row {
-    display: flex; flex-direction: column; align-items: center; 
-    text-align: center; gap: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
   }
-  .footer-partners img { height: 28px; }
+  .footer-partners img {
+    height: 28px;
+  }
 }
 
 /* ===== Tablete (≤1024px) – apropiem tot de stilul index ===== */
 @media (max-width: 1024px) {
-  .section-head { grid-template-columns: 1fr; text-align: center; }
-  .section-head .btn-cta { justify-self: center; }
-  .services .subtitle, .section-head .subtitle { 
-    text-align: center; max-width: 760px; margin: 0 auto 20px; 
+  .section-head {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
-  .contact-grid { grid-template-columns: 1fr; }
-  .contact-aside { position: static; }
-  .srv-slider { grid-template-columns: 1fr; max-width: 940px; margin: 16px auto 0; }
-}/* ===== SERVICII pe mobil cu SCROLL orizontal ===== */
+  .section-head .btn-cta {
+    justify-self: center;
+  }
+  .services .subtitle,
+  .section-head .subtitle {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 20px;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-aside {
+    position: static;
+  }
+  .srv-slider {
+    grid-template-columns: 1fr;
+    max-width: 940px;
+    margin: 16px auto 0;
+  }
+} /* ===== SERVICII pe mobil cu SCROLL orizontal ===== */
 @media (max-width: 768px) {
   .srv-viewport {
-    overflow-x: auto;      /* permite scroll orizontal */
+    overflow-x: auto; /* permite scroll orizontal */
     scroll-snap-type: x mandatory; /* opțional: snap pe card */
     -webkit-overflow-scrolling: touch; /* smooth pe iOS */
     padding: 0 8px;
@@ -208,25 +346,28 @@
 
   .srv-row {
     display: flex;
-    flex-wrap: nowrap;     /* cardurile rămân pe un rând */
+    flex-wrap: nowrap; /* cardurile rămân pe un rând */
     gap: 16px;
     transform: none !important; /* anulăm translateX de la JS */
   }
 
   .srv-card {
-    flex: 0 0 80%;         /* fiecare card ocupă ~80% din lățimea ecranului */
-    max-width: 320px;      /* limită ca să nu fie uriaș */
+    flex: 0 0 80%; /* fiecare card ocupă ~80% din lățimea ecranului */
+    max-width: 320px; /* limită ca să nu fie uriaș */
     scroll-snap-align: start;
-    border: 1px solid rgba(0,0,0,.06);
-    box-shadow: 0 10px 24px rgba(0,0,0,.06);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
     border-radius: var(--radius);
   }
 
-  .srv-btn { display: none; } /* ascundem butoanele pe mobil */
-}@media (max-width: 768px) {
+  .srv-btn {
+    display: none;
+  } /* ascundem butoanele pe mobil */
+}
+@media (max-width: 768px) {
   /* Butoane mici pentru carusel */
   .srv-btn {
-    display: grid; 
+    display: grid;
     place-items: center;
     position: absolute;
     top: 45%;
@@ -236,15 +377,20 @@
     border-radius: 50%;
     border: none;
     background: var(--card);
-    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     z-index: 5;
     font-size: 18px;
     cursor: pointer;
   }
 
-  .srv-prev { left: 6px; }
-  .srv-next { right: 6px; }
-}@media (max-width: 768px) {
+  .srv-prev {
+    left: 6px;
+  }
+  .srv-next {
+    right: 6px;
+  }
+}
+@media (max-width: 768px) {
   .partners {
     display: flex;
     justify-content: flex-start;
@@ -253,31 +399,44 @@
     padding: 0 12px 8px;
     scroll-snap-type: x mandatory;
   }
-  .partners a { scroll-snap-align: center; }
-}/* Servicii → partenerii de sub "Solicită consultanță" (mobil) */
+  .partners a {
+    scroll-snap-align: center;
+  }
+} /* Servicii → partenerii de sub "Solicită consultanță" (mobil) */
 @media (max-width: 768px) {
   /* țintim DOAR partialul din pagina Servicii */
   .services .partners {
-    display: flex !important;      /* suprascrie grid/scroll de pe alte pagini */
-    justify-content: center;       /* centru pe rând */
+    display: flex !important; /* suprascrie grid/scroll de pe alte pagini */
+    justify-content: center; /* centru pe rând */
     align-items: center;
-    flex-wrap: wrap;               /* permite 2–3 rânduri dacă sunt multe logo-uri */
+    flex-wrap: wrap; /* permite 2–3 rânduri dacă sunt multe logo-uri */
     gap: 16px;
-    overflow: visible !important;  /* anulăm overflow-x:auto de la banda scroll */
+    overflow: visible !important; /* anulăm overflow-x:auto de la banda scroll */
     padding: 8px 0;
     margin: 6px auto 0;
-    max-width: calc(100% - 28px);  /* puțin “air” la margini */
+    max-width: calc(100% - 28px); /* puțin “air” la margini */
   }
-  .services .partners a { flex: 0 0 auto; }
-  .services .partners img { height: 28px; width: auto; }
+  .services .partners a {
+    flex: 0 0 auto;
+  }
+  .services .partners img {
+    height: 28px;
+    width: auto;
+  }
 
   /* un mic spațiu între buton și parteneri */
-  .services-cta { margin-bottom: 10px; }
-}/* ===== CONTACT — telefon (≤768px) ===== */
+  .services-cta {
+    margin-bottom: 10px;
+  }
+} /* ===== CONTACT — telefon (≤768px) ===== */
 @media (max-width: 768px) {
   /* container + spacing ca pe index */
-  .contact-page { padding: 28px 14px 52px; }
-  .container { width: 100%; }
+  .contact-page {
+    padding: 28px 14px 52px;
+  }
+  .container {
+    width: 100%;
+  }
 
   /* o singură coloană, ordine logică: info → formular → hartă */
   .contact-grid {
@@ -285,12 +444,21 @@
     grid-template-columns: 1fr;
     gap: 14px;
   }
-  .contact-aside { position: static !important; top: auto !important; }
+  .contact-aside {
+    position: static !important;
+    top: auto !important;
+  }
 
   /* ordonăm cardurile fără să schimbi HTML-ul */
-  .contact-aside .info-card { order: 1; }
-  .contact-page .contact-card { order: 2; }  /* cardul cu titlu + formular */
-  .contact-aside .map-card   { order: 3; }
+  .contact-aside .info-card {
+    order: 1;
+  }
+  .contact-page .contact-card {
+    order: 2;
+  } /* cardul cu titlu + formular */
+  .contact-aside .map-card {
+    order: 3;
+  }
 
   /* carduri pe toată lățimea, padding mai strâns */
   .contact-card,
@@ -298,7 +466,7 @@
   .info-card {
     padding: 16px;
     border-radius: var(--radius);
-    box-shadow: 0 10px 24px rgba(0,0,0,.06);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
   }
 
   /* titlu + subtitlu centrate, ca pe index */
@@ -307,37 +475,69 @@
     text-align: center;
   }
   .contact-card .subtitle {
-    max-width: 680px; margin: 0 auto 14px; color: var(--muted); font-size: 1rem;
+    max-width: 680px;
+    margin: 0 auto 14px;
+    color: var(--muted);
+    font-size: 1rem;
   }
 
   /* formular: pe un singur rând, tap-friendly */
-  #contactForm .form-row { grid-template-columns: 1fr; gap: 10px; }
-  #contactForm input, #contactForm textarea {
-    min-height: 44px;          /* target touch */
-    font-size: 16px;           /* evită zoom-ul iOS */
+  #contactForm .form-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
-  #contactForm textarea { min-height: 140px; }
-  #contactForm .btn.btn-primary { width: 100%; }
+  #contactForm input,
+  #contactForm textarea {
+    min-height: 44px; /* target touch */
+    font-size: 16px; /* evită zoom-ul iOS */
+  }
+  #contactForm textarea {
+    min-height: 140px;
+  }
+  #contactForm .btn.btn-primary {
+    width: 100%;
+  }
 
   /* info rapid: text care nu sparge layout-ul */
-  .contact-info a, .contact-info p {
-    display: block; margin: 6px 0; word-break: break-word; white-space: normal;
+  .contact-info a,
+  .contact-info p {
+    display: block;
+    margin: 6px 0;
+    word-break: break-word;
+    white-space: normal;
   }
 
   /* hartă full-width, 16:9 (responsive) */
-  .map-wrap { position: relative; width: 100%; padding-top: 56.25%; border-radius: var(--radius); overflow: hidden; }
-  .map-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .map-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .map-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
 }
 
 /* ===== tabletă (≤1024px): tot pe o coloană, dar cu puțin mai mult air ===== */
 @media (max-width: 1024px) {
-  .contact-grid { grid-template-columns: 1fr; gap: 18px; }
-  .contact-aside { position: static; }
-}/* ===== CONTACT – forțează 1 col pe telefoane (≤768px) ===== */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .contact-aside {
+    position: static;
+  }
+} /* ===== CONTACT – forțează 1 col pe telefoane (≤768px) ===== */
 @media (max-width: 768px) {
   /* container ca pe index, fără max-width care ține două coloane */
   .section.container,
-  .contact-page { 
+  .contact-page {
     padding: 28px 14px 52px !important;
     max-width: 100% !important;
   }
@@ -362,24 +562,48 @@
   }
 
   /* sticky off pe mobil */
-  .contact-aside { position: static !important; top: auto !important; }
+  .contact-aside {
+    position: static !important;
+    top: auto !important;
+  }
 
   /* form pe o coloană + buton full */
-  #contactForm .form-row { grid-template-columns: 1fr !important; gap: 10px !important; }
-  #contactForm .btn.btn-primary { width: 100% !important; }
+  #contactForm .form-row {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  #contactForm .btn.btn-primary {
+    width: 100% !important;
+  }
 
   /* titlu + subtitlu centrate */
   .contact-card .sec-title,
-  .contact-card .subtitle { text-align: center !important; }
   .contact-card .subtitle {
-    max-width: 680px; margin: 0 auto 14px; color: var(--muted);
+    text-align: center !important;
+  }
+  .contact-card .subtitle {
+    max-width: 680px;
+    margin: 0 auto 14px;
+    color: var(--muted);
     font-size: 1rem;
   }
 
   /* hartă responsive 16:9 */
-  .map-wrap { position: relative; width: 100%; padding-top: 56.25%; border-radius: var(--radius); overflow: hidden; }
-  .map-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-}/* CONTACT — forțează 1 col pe mobil */
+  .map-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .map-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+} /* CONTACT — forțează 1 col pe mobil */
 @media (max-width: 768px) {
   /* Suprascriem orice regulă desktop */
   .contact-page .contact-grid {
@@ -425,11 +649,16 @@
     height: 100%;
     border: 0;
   }
-}/* ===== CONTACT — telefoane (≤768px) ===== */
+} /* ===== CONTACT — telefoane (≤768px) ===== */
 @media (max-width: 768px) {
   /* container ca pe index */
-  .contact-page { padding: 28px 14px 52px !important; }
-  .contact-page .container { max-width: 100% !important; padding: 0 !important; }
+  .contact-page {
+    padding: 28px 14px 52px !important;
+  }
+  .contact-page .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
 
   /* rupem complet gridul de 2 coloane */
   .contact-page .contact-grid {
@@ -454,40 +683,79 @@
   }
 
   /* sticky off pe mobil */
-  .contact-page .contact-aside { position: static !important; top: auto !important; }
+  .contact-page .contact-aside {
+    position: static !important;
+    top: auto !important;
+  }
 
   /* titlu + subtitlu ca pe index */
   .contact-page .contact-card .sec-title,
-  .contact-page .contact-card .subtitle { text-align: center !important; }
   .contact-page .contact-card .subtitle {
-    max-width: 680px; margin: 0 auto 14px; color: var(--muted); font-size: 1rem;
+    text-align: center !important;
+  }
+  .contact-page .contact-card .subtitle {
+    max-width: 680px;
+    margin: 0 auto 14px;
+    color: var(--muted);
+    font-size: 1rem;
   }
 
   /* formular pe o coloană + tap targets mari */
-  #contactForm .form-row { display: block !important; }
-  #contactForm input, #contactForm textarea {
+  #contactForm .form-row {
+    display: block !important;
+  }
+  #contactForm input,
+  #contactForm textarea {
     width: 100% !important;
     min-height: 44px;
     font-size: 16px; /* previne zoom pe iOS */
     margin-bottom: 10px;
   }
-  #contactForm textarea { min-height: 140px; }
-  #contactForm .btn.btn-primary { width: 100% !important; }
+  #contactForm textarea {
+    min-height: 140px;
+  }
+  #contactForm .btn.btn-primary {
+    width: 100% !important;
+  }
 
   /* hartă responsive 16:9 */
-  .map-wrap { position: relative; width: 100%; padding-top: 56.25%; border-radius: var(--radius); overflow: hidden; }
-  .map-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .map-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .map-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
 }
 
 /* ===== Tablete (≤1024px) — tot 1 col, aerisit ===== */
 @media (max-width: 1024px) {
-  .contact-page .contact-grid { grid-template-columns: 1fr !important; gap: 18px !important; }
-  .contact-page .contact-aside { position: static !important; }
-}@media (max-width: 768px) {
-  .contact-page .contact-aside .info-card { order: 1; }
-  .contact-page .contact-card { order: 2; }
-  .contact-page .contact-aside .map-card { order: 3; }
-}/* ===== Contact – zoom UI pe telefoane (≤768px) ===== */
+  .contact-page .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+  .contact-page .contact-aside {
+    position: static !important;
+  }
+}
+@media (max-width: 768px) {
+  .contact-page .contact-aside .info-card {
+    order: 1;
+  }
+  .contact-page .contact-card {
+    order: 2;
+  }
+  .contact-page .contact-aside .map-card {
+    order: 3;
+  }
+} /* ===== Contact – zoom UI pe telefoane (≤768px) ===== */
 @media (max-width: 768px) {
   /* titlu + subtitlu mai mari */
   .contact-page .sec-title {
@@ -531,12 +799,12 @@
     font-size: 1.05rem;
     line-height: 1.5;
   }
-}/* ===== Zoom general pe Contact – telefoane (≤768px) ===== */
+} /* ===== Zoom general pe Contact – telefoane (≤768px) ===== */
 @media (max-width: 768px) {
   /* scalăm tot conținutul Contact */
   .contact-page {
-    font-size: 1.1rem;         /* font mai mare */
-    line-height: 1.6;          /* mai aerisit */
+    font-size: 1.1rem; /* font mai mare */
+    line-height: 1.6; /* mai aerisit */
   }
 
   /* titlul și subtitlul */
@@ -578,16 +846,18 @@
   .map-card iframe {
     height: 300px;
   }
-  .contact-info a, .contact-info p {
+  .contact-info a,
+  .contact-info p {
     font-size: 1.1rem;
     margin: 8px 0;
   }
-}@media (max-width: 768px) {
+}
+@media (max-width: 768px) {
   /* zoom pe toată secțiunea */
   .contact-page {
-    transform: scale(1.15);        /* mărește tot conținutul */
-    transform-origin: top center;  /* ca să rămână centrat */
-    padding-bottom: 80px;          /* spațiu jos pentru scroll */
+    transform: scale(1.15); /* mărește tot conținutul */
+    transform-origin: top center; /* ca să rămână centrat */
+    padding-bottom: 80px; /* spațiu jos pentru scroll */
   }
 
   /* ca să nu fie decupat în lateral */
@@ -595,23 +865,31 @@
     max-width: 100% !important;
     overflow-x: hidden;
   }
-}@media (max-width: 768px) {
+}
+@media (max-width: 768px) {
   .contact-page .card {
     border-radius: 16px;
     padding: 24px;
     margin-bottom: 24px;
   }
 
-  .contact-page .sec-title { font-size: 2rem; }
-  .contact-page .subtitle { font-size: 1.2rem; line-height: 1.5; }
+  .contact-page .sec-title {
+    font-size: 2rem;
+  }
+  .contact-page .subtitle {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
 
-  #contactForm input, 
+  #contactForm input,
   #contactForm textarea {
     font-size: 1.2rem;
     padding: 16px;
     border-radius: 12px;
   }
-  #contactForm textarea { min-height: 200px; }
+  #contactForm textarea {
+    min-height: 200px;
+  }
 
   #contactForm .btn.btn-primary {
     font-size: 1.2rem;
@@ -619,14 +897,19 @@
     border-radius: 14px;
   }
 
-  .map-wrap iframe { height: 320px; }
-  .contact-info a, .contact-info p { font-size: 1.15rem; }
-}/* ===== Contact – zoom + spacing ca Index ===== */
+  .map-wrap iframe {
+    height: 320px;
+  }
+  .contact-info a,
+  .contact-info p {
+    font-size: 1.15rem;
+  }
+} /* ===== Contact – zoom + spacing ca Index ===== */
 @media (max-width: 768px) {
   .contact-page {
-    font-size: 1.15rem;          /* font mai mare, ca pe Index */
+    font-size: 1.15rem; /* font mai mare, ca pe Index */
     line-height: 1.6;
-    padding: 40px 18px 80px;     /* mai mult spațiu sus și jos */
+    padding: 40px 18px 80px; /* mai mult spațiu sus și jos */
   }
 
   /* titlu + subtitlu similare cu hero-ul de pe index */
@@ -648,7 +931,7 @@
     padding: 24px 20px;
     margin-bottom: 28px;
     border-radius: 16px;
-    box-shadow: 0 10px 24px rgba(0,0,0,.08);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
   }
 
   /* inputurile + textarea la fel de mari ca butoanele de pe index */
@@ -659,7 +942,9 @@
     min-height: 52px;
     border-radius: 12px;
   }
-  #contactForm textarea { min-height: 190px; }
+  #contactForm textarea {
+    min-height: 190px;
+  }
 
   #contactForm .btn.btn-primary {
     font-size: 1.2rem;
@@ -669,7 +954,9 @@
   }
 
   /* harta mai mare pentru scroll extra */
-  .map-wrap iframe { height: 340px; }
+  .map-wrap iframe {
+    height: 340px;
+  }
 
   /* info rapid la fel de lizibil */
   .contact-info a,
@@ -677,13 +964,13 @@
     font-size: 1.15rem;
     margin: 8px 0;
   }
-}/* ===== Contact – super zoom pe telefoane (≤768px) ===== */
+} /* ===== Contact – super zoom pe telefoane (≤768px) ===== */
 @media (max-width: 768px) {
   .contact-page {
-    font-size: 1.3rem;          /* creștem fontul de bază */
+    font-size: 1.3rem; /* creștem fontul de bază */
     line-height: 1.65;
-    padding: 50px 20px 100px;   /* mult spațiu sus și jos */
-    transform: scale(1.3);      /* efect de zoom global */
+    padding: 50px 20px 100px; /* mult spațiu sus și jos */
+    transform: scale(1.3); /* efect de zoom global */
     transform-origin: top center;
   }
 
@@ -707,7 +994,7 @@
     padding: 28px 24px;
     margin-bottom: 36px;
     border-radius: 20px;
-    box-shadow: 0 12px 28px rgba(0,0,0,.1);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
   }
 
   /* Inputuri și textarea mari (pentru tap confortabil) */
@@ -718,7 +1005,9 @@
     min-height: 60px;
     border-radius: 14px;
   }
-  #contactForm textarea { min-height: 220px; }
+  #contactForm textarea {
+    min-height: 220px;
+  }
 
   /* Buton trimite mare, lat, ca un CTA principal */
   #contactForm .btn.btn-primary {
@@ -730,7 +1019,9 @@
   }
 
   /* Hartă mai mare */
-  .map-wrap iframe { height: 380px; }
+  .map-wrap iframe {
+    height: 380px;
+  }
 
   /* Info rapid la fel de mare */
   .contact-info a,
@@ -739,10 +1030,10 @@
     line-height: 1.6;
     margin: 10px 0;
   }
-}/* ===== Contact – versiune mare pe mobil ===== */
+} /* ===== Contact – versiune mare pe mobil ===== */
 @media (max-width: 768px) {
   .contact-page {
-    font-size: 1.4rem;        /* mult mai mare decât default */
+    font-size: 1.4rem; /* mult mai mare decât default */
     line-height: 1.7;
     padding: 60px 22px 120px;
   }
@@ -767,7 +1058,7 @@
     padding: 32px 26px;
     margin-bottom: 40px;
     border-radius: 20px;
-    box-shadow: 0 12px 28px rgba(0,0,0,.12);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
   }
 
   /* Inputuri / textarea mari */
@@ -778,7 +1069,9 @@
     min-height: 64px; /* mai mult decât 44px recomandat */
     border-radius: 14px;
   }
-  #contactForm textarea { min-height: 240px; }
+  #contactForm textarea {
+    min-height: 240px;
+  }
 
   /* Buton mare și lat */
   #contactForm .btn.btn-primary {
@@ -790,7 +1083,9 @@
   }
 
   /* Hartă mare pentru scroll */
-  .map-wrap iframe { height: 400px; }
+  .map-wrap iframe {
+    height: 400px;
+  }
 
   /* Info rapid foarte lizibil */
   .contact-info a,
@@ -799,28 +1094,47 @@
     line-height: 1.6;
     margin: 12px 0;
   }
-}/* ===== ZOOM GLOBAL pe telefoane — TOT site-ul (≤768px) ===== */
+} /* ===== ZOOM GLOBAL pe telefoane — TOT site-ul (≤768px) ===== */
 @media (max-width: 768px) {
   /* 1) Bază tipografică mai mare (zoom natural) */
-  html { font-size: 18.5px; }           /* ~15–20% mai mare peste tot */
-  body { line-height: 1.7; }
+  html {
+    font-size: 18.5px;
+  } /* ~15–20% mai mare peste tot */
+  body {
+    line-height: 1.7;
+  }
 
   /* 2) Container & spațiere */
   .section.container,
-  .contact-page { padding: 52px 20px 96px; }
+  .contact-page {
+    padding: 52px 20px 96px;
+  }
 
   /* 3) HEADER (brand + burger + CTA) */
-  .site-header .header-inner { padding: 10px 14px; }
-  .brand img { height: 28px; width: auto; }       /* logo puțin mai mare */
-  .burger { width: 40px; height: 40px; gap: 4px; }
-  .burger span { height: 3px; }
+  .site-header .header-inner {
+    padding: 10px 14px;
+  }
+  .brand img {
+    height: 28px;
+    width: auto;
+  } /* logo puțin mai mare */
+  .burger {
+    width: 40px;
+    height: 40px;
+    gap: 4px;
+  }
+  .burger span {
+    height: 3px;
+  }
   .btn-cta {
     padding: 12px 16px;
     border-radius: 14px;
     font-weight: 800;
-    min-height: 44px;                    /* ținte touch Apple */
+    min-height: 44px; /* ținte touch Apple */
   }
-  .header-spacer { height: 70px; }       /* compensează header-ul mărit */
+  .header-spacer {
+    height: 70px;
+  } /* compensează header-ul mărit */
 
   /* Mobile nav (când e deschis) — linkuri mari, ușor de atins */
   .mobile-nav[aria-hidden="false"] a {
@@ -831,7 +1145,9 @@
   }
 
   /* 4) BUTTONS / CTA-uri în tot site-ul (inclusiv formulare) */
-  .btn, .btn.btn-primary, .btn-cta.ghost {
+  .btn,
+  .btn.btn-primary,
+  .btn-cta.ghost {
     font-size: 1.1rem;
     padding: 14px 18px;
     border-radius: 14px;
@@ -839,54 +1155,135 @@
   }
 
   /* 5) FORME (global) */
-  input, textarea, select {
+  input,
+  textarea,
+  select {
     font-size: 1.05rem;
     padding: 14px;
     min-height: 48px;
     border-radius: 12px;
   }
-  textarea { min-height: 180px; }
+  textarea {
+    min-height: 180px;
+  }
 
   /* 6) CONTACT — zoom & cadrare (mai mare decât restul) */
-  .contact-page .sec-title { font-size: 2.2rem; margin-bottom: 14px; }
-  .contact-page .subtitle  { font-size: 1.25rem; margin: 0 auto 22px; max-width: 720px; text-align: center; }
-  .contact-page .card { padding: 26px 20px; border-radius: 18px; margin-bottom: 28px; }
-  #contactForm .btn.btn-primary { font-size: 1.2rem; padding: 18px; border-radius: 16px; width: 100%; }
-  .map-wrap iframe { height: 360px; }     /* hartă mai înaltă */
+  .contact-page .sec-title {
+    font-size: 2.2rem;
+    margin-bottom: 14px;
+  }
+  .contact-page .subtitle {
+    font-size: 1.25rem;
+    margin: 0 auto 22px;
+    max-width: 720px;
+    text-align: center;
+  }
+  .contact-page .card {
+    padding: 26px 20px;
+    border-radius: 18px;
+    margin-bottom: 28px;
+  }
+  #contactForm .btn.btn-primary {
+    font-size: 1.2rem;
+    padding: 18px;
+    border-radius: 16px;
+    width: 100%;
+  }
+  .map-wrap iframe {
+    height: 360px;
+  } /* hartă mai înaltă */
 
   /* 7) SERVICII – păstrăm scroll orizontal & butoane mici */
-  .srv-viewport { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding: 0 10px; }
-  .srv-row { gap: 16px; transform: none !important; }
-  .srv-card { flex: 0 0 80%; max-width: 360px; scroll-snap-align: start; }
-  .srv-btn { width: 32px; height: 32px; font-size: 18px; top: 45%; } /* dacă vrei și butoane pe mobil */
+  .srv-viewport {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 10px;
+  }
+  .srv-row {
+    gap: 16px;
+    transform: none !important;
+  }
+  .srv-card {
+    flex: 0 0 80%;
+    max-width: 360px;
+    scroll-snap-align: start;
+  }
+  .srv-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    top: 45%;
+  } /* dacă vrei și butoane pe mobil */
 
   /* 8) PARTENERI — centrare pe mobil în pagina Servicii */
-  .services .partners { display:flex!important; justify-content:center; align-items:center; flex-wrap:wrap; gap:16px; padding:8px 0; }
-  .services .partners img { height: 30px; }
+  .services .partners {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 8px 0;
+  }
+  .services .partners img {
+    height: 30px;
+  }
 
   /* 9) FOOTER — zoom + stivă */
-  .footer-bar { padding: 20px 16px 28px; }
-  .footer-row { display:flex; flex-direction:column; gap:12px; text-align:center; align-items:center; }
-  .footer-item { font-size: 1.05rem; }
-  .footer-item .btn-book { padding: 12px 14px; border-radius: 12px; min-height: 44px; }
-  .footer-partners img { height: 30px; }
-  .footer-social img { height: 22px; width: auto; }
+  .footer-bar {
+    padding: 20px 16px 28px;
+  }
+  .footer-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    align-items: center;
+  }
+  .footer-item {
+    font-size: 1.05rem;
+  }
+  .footer-item .btn-book {
+    padding: 12px 14px;
+    border-radius: 12px;
+    min-height: 44px;
+  }
+  .footer-partners img {
+    height: 30px;
+  }
+  .footer-social img {
+    height: 22px;
+    width: auto;
+  }
 }
 
 /* ===== Tablete (≤1024px) – puțin zoom, dar nu la fel de mare ca pe phone */
 @media (max-width: 1024px) and (min-width: 769px) {
-  html { font-size: 17px; }
-  .header-spacer { height: 68px; }
-  .footer-bar { padding: 24px 18px; }
-}/* ===== RESET: scoatem orice scale anterioare ===== */
+  html {
+    font-size: 17px;
+  }
+  .header-spacer {
+    height: 68px;
+  }
+  .footer-bar {
+    padding: 24px 18px;
+  }
+} /* ===== RESET: scoatem orice scale anterioare ===== */
 @media (max-width: 768px) {
-  .contact-page { transform: none !important; }  /* dacă ai pus scale înainte */
+  .contact-page {
+    transform: none !important;
+  } /* dacă ai pus scale înainte */
 }
 
 /* ===== VAR: lățime coloană mobil (schimbă 420px cum vrei) ===== */
 @media (max-width: 768px) {
-  :root { --mobile-col-width: 420px; } /* 400–440px e sweet spot */
-  html, body { overflow-x: hidden; }
+  :root {
+    --mobile-col-width: 420px;
+  } /* 400–440px e sweet spot */
+  html,
+  body {
+    overflow-x: hidden;
+  }
 }
 
 /* ===== HEADER: aliniere & aceeași lățime ca pagina ===== */
@@ -896,10 +1293,21 @@
     margin: 0 auto;
     padding-inline: 12px;
   }
-  .header-spacer { height: 70px; } /* ajustează dacă header-ul tău e mai înalt */
-  .brand img { height: 28px; width: auto; }           /* logo puțin mai mare */
-  .btn-cta { min-height: 44px; padding: 10px 14px; }  /* tap-friendly */
-  .burger { width: 40px; height: 40px; }
+  .header-spacer {
+    height: 70px;
+  } /* ajustează dacă header-ul tău e mai înalt */
+  .brand img {
+    height: 28px;
+    width: auto;
+  } /* logo puțin mai mare */
+  .btn-cta {
+    min-height: 44px;
+    padding: 10px 14px;
+  } /* tap-friendly */
+  .burger {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 /* ===== CONȚINUT: coloană centrată, fără tăieturi ===== */
@@ -914,15 +1322,38 @@
   }
 
   /* Contact: o coloană + zoom tipografic sănătos */
-  .contact-page { padding-top: 40px; line-height: 1.65; font-size: 1.2rem; }
-  .contact-grid { display: block !important; }
-  .contact-page .card { width: 100%; max-width: 100%; margin: 0 0 24px; border-radius: 18px; padding: 24px 18px; }
+  .contact-page {
+    padding-top: 40px;
+    line-height: 1.65;
+    font-size: 1.2rem;
+  }
+  .contact-grid {
+    display: block !important;
+  }
+  .contact-page .card {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 24px;
+    border-radius: 18px;
+    padding: 24px 18px;
+  }
 
-  .contact-page .sec-title { font-size: 2.1rem; margin-bottom: 12px; }
-  .contact-page .subtitle  { font-size: 1.2rem; text-align: center; margin: 0 auto 20px; max-width: 36ch; }
+  .contact-page .sec-title {
+    font-size: 2.1rem;
+    margin-bottom: 12px;
+  }
+  .contact-page .subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0 auto 20px;
+    max-width: 36ch;
+  }
 
-  #contactForm .form-row { display: block; }
-  #contactForm input, #contactForm textarea {
+  #contactForm .form-row {
+    display: block;
+  }
+  #contactForm input,
+  #contactForm textarea {
     width: 100%;
     font-size: 1.1rem;
     padding: 14px;
@@ -931,78 +1362,140 @@
     margin-bottom: 10px;
     box-sizing: border-box;
   }
-  #contactForm textarea { min-height: 190px; }
-  #contactForm .btn.btn-primary { width: 100%; font-size: 1.2rem; padding: 16px; border-radius: 14px; }
+  #contactForm textarea {
+    min-height: 190px;
+  }
+  #contactForm .btn.btn-primary {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 16px;
+    border-radius: 14px;
+  }
 
   /* Hartă fluidă și încadrată în coloană */
-  .map-wrap { position: relative; width: 100%; padding-top: 56.25%; border-radius: 14px; overflow: hidden; }
-  .map-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .map-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+  .map-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
 }
 
 /* ===== FOOTER: aceeași lățime și centrare ===== */
 @media (max-width: 768px) {
-  .footer-bar { padding: 20px 0 28px; }
+  .footer-bar {
+    padding: 20px 0 28px;
+  }
   .footer-row {
     max-width: var(--mobile-col-width);
     margin: 0 auto;
     padding: 0 12px;
-    display: flex; flex-direction: column; gap: 12px; text-align: center; align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    align-items: center;
   }
-  .footer-item, .footer-item * { font-size: 1.05rem; }
-  .footer-partners img { height: 28px; }
-  .footer-social img { height: 22px; width: auto; }
-}@media (max-width: 768px) {
-  :root { --mobile-col-width: 420px; } /* poți pune 400–440px */
+  .footer-item,
+  .footer-item * {
+    font-size: 1.05rem;
+  }
+  .footer-partners img {
+    height: 28px;
+  }
+  .footer-social img {
+    height: 22px;
+    width: auto;
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --mobile-col-width: 420px;
+  } /* poți pune 400–440px */
 
   /* conținutul footerului pe aceeași coloană ca restul paginii */
-  .footer-row{
+  .footer-row {
     max-width: var(--mobile-col-width);
     margin: 0 auto;
     padding: 0 12px;
-    display:flex; flex-direction:column; gap:12px;
-    text-align:center; align-items:center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    align-items: center;
   }
 
   /* textul din footer să nu “spargă” coloana */
-  .footer-item, .footer-item *{
-    overflow-wrap:anywhere;
-    text-wrap:pretty;
-    line-height:1.5;
+  .footer-item,
+  .footer-item * {
+    overflow-wrap: anywhere;
+    text-wrap: pretty;
+    line-height: 1.5;
   }
 
   /* butonul și iconițele – dimensiuni coerente */
-  .footer-item .btn-book{ min-height:44px; padding:10px 14px; border-radius:12px; }
-  .footer-social img{ height:22px; width:auto; }
-  .footer-partners img{ height:28px; }
-}@media (max-width: 768px) {
-  .footer-wave{
-    display:block;
-    height:36px;              /* ajustează după SVG/PNG-ul tău */
-    width:100vw;              /* întinde-l pe toată lățimea ecranului */
+  .footer-item .btn-book {
+    min-height: 44px;
+    padding: 10px 14px;
+    border-radius: 12px;
+  }
+  .footer-social img {
+    height: 22px;
+    width: auto;
+  }
+  .footer-partners img {
+    height: 28px;
+  }
+}
+@media (max-width: 768px) {
+  .footer-wave {
+    display: block;
+    height: 36px; /* ajustează după SVG/PNG-ul tău */
+    width: 100vw; /* întinde-l pe toată lățimea ecranului */
     margin: 16px 0 0;
     margin-left: calc(50% - 50vw); /* full-bleed aliniat perfect */
   }
-  .footer-bar{ padding: 20px 0 28px; } /* conținutul rămâne în coloană */
-}@media (max-width: 768px) {
+  .footer-bar {
+    padding: 20px 0 28px;
+  } /* conținutul rămâne în coloană */
+}
+@media (max-width: 768px) {
   /* cardul cu hartă – margine consistentă jos */
-  .map-card{ margin-bottom: 20px !important; }
+  .map-card {
+    margin-bottom: 20px !important;
+  }
 
   /* email/telefon/adresă – rânduri mai compacte, controlate */
-  .contact-info a, .contact-info p{
-    margin: 8px 0; font-size: 1.1rem; line-height: 1.5;
+  .contact-info a,
+  .contact-info p {
+    margin: 8px 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
   }
 
   /* elimină orice scroll orizontal accidental */
-  html, body{ overflow-x: hidden; }
-}@media (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 768px) {
   /* blocul cu contact rapid din footer */
   .footer-contact {
     display: flex;
     flex-direction: column;
-    align-items: center;       /* centrare orizontală */
+    align-items: center; /* centrare orizontală */
     justify-content: center;
-    text-align: center;        /* tot textul centrat */
-    gap: 8px;                  /* spațiu între rânduri */
+    text-align: center; /* tot textul centrat */
+    gap: 8px; /* spațiu între rânduri */
     width: 100%;
   }
 
@@ -1034,58 +1527,164 @@
     font-size: 1.1rem;
     line-height: 1.6;
   }
-}@media (max-width: 768px) {
+}
+@media (max-width: 768px) {
   .footer-contact span {
     font-size: 14px;
   }
-}/* ===== HEADER – spacer unic pe mobil ===== */
+} /* ===== HEADER – spacer unic pe mobil ===== */
 @media (max-width: 768px) {
-  .header-spacer { height: 64px !important; } /* aceeași pe toate paginile */
-}/* ===== HEADER – aceeași lățime ca restul conținutului ===== */
+  .header-spacer {
+    height: 64px !important;
+  } /* aceeași pe toate paginile */
+} /* ===== HEADER – aceeași lățime ca restul conținutului ===== */
 @media (max-width: 768px) {
-  :root { --mobile-col-width: 420px; }          /* 400–440 e ok */
+  :root {
+    --mobile-col-width: 420px;
+  } /* 400–440 e ok */
   .site-header .header-inner {
     max-width: var(--mobile-col-width);
     margin: 0 auto;
     padding-inline: 12px;
   }
-}@media (max-width: 768px) {
-  :root { --mobile-col-width: 420px; }
-
-  .site-header { --header-bg:#111; --menu-bg:#ffd91a; --menu-link:#111; position: sticky; top:0; z-index:1200; background: var(--header-bg); }
-  .site-header .header-inner {
-    display:grid; grid-template-columns:auto 1fr auto; align-items:center;
-    max-width: var(--mobile-col-width); margin:0 auto; padding:10px 12px; gap:8px;
+}
+@media (max-width: 768px) {
+  :root {
+    --mobile-col-width: 420px;
   }
-  .header-actions { display: contents; } /* plasăm burger + CTA direct în grid */
 
-  .brand img { height: 28px; width:auto; }
+  .site-header {
+    --header-bg: #111;
+    --menu-bg: #ffd91a;
+    --menu-link: #111;
+    position: sticky;
+    top: 0;
+    z-index: 1200;
+    background: var(--header-bg);
+  }
+  .site-header .header-inner {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    max-width: var(--mobile-col-width);
+    margin: 0 auto;
+    padding: 10px 12px;
+    gap: 8px;
+  }
+  .header-actions {
+    display: contents;
+  } /* plasăm burger + CTA direct în grid */
+
+  .brand img {
+    height: 28px;
+    width: auto;
+  }
 
   /* burger pe mijloc, vizibil */
-  .burger { grid-column:2; justify-self:center; width:44px; height:44px; border-radius:10px; background:#ffd91a; border:0; display:grid; place-items:center; position:relative; }
-  .burger span { position:absolute; left:50%; transform:translateX(-50%); width:22px; height:3px; background:#111; border-radius:2px; transition:.2s; }
-  .burger span:nth-child(1){ top:14px; } .burger span:nth-child(2){ top:20px; } .burger span:nth-child(3){ top:26px; }
-  .site-header.is-open .burger span:nth-child(1){ top:20px; transform:translateX(-50%) rotate(45deg); }
-  .site-header.is-open .burger span:nth-child(2){ opacity:0; }
-  .site-header.is-open .burger span:nth-child(3){ top:20px; transform:translateX(-50%) rotate(-45deg); }
+  .burger {
+    grid-column: 2;
+    justify-self: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: #ffd91a;
+    border: 0;
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+  .burger span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 22px;
+    height: 3px;
+    background: #111;
+    border-radius: 2px;
+    transition: 0.2s;
+  }
+  .burger span:nth-child(1) {
+    top: 14px;
+  }
+  .burger span:nth-child(2) {
+    top: 20px;
+  }
+  .burger span:nth-child(3) {
+    top: 26px;
+  }
+  .site-header.is-open .burger span:nth-child(1) {
+    top: 20px;
+    transform: translateX(-50%) rotate(45deg);
+  }
+  .site-header.is-open .burger span:nth-child(2) {
+    opacity: 0;
+  }
+  .site-header.is-open .burger span:nth-child(3) {
+    top: 20px;
+    transform: translateX(-50%) rotate(-45deg);
+  }
 
   /* CTA dreapta */
-  .btn-cta { grid-column:3; justify-self:end; padding:8px 12px; min-height:36px; border-radius:12px; font-weight:700; }
+  .btn-cta {
+    grid-column: 3;
+    justify-self: end;
+    padding: 8px 12px;
+    min-height: 36px;
+    border-radius: 12px;
+    font-weight: 700;
+  }
 
   /* meniu mobil */
-  .mobile-nav { position:absolute; left:0; right:0; top:100%; background:var(--menu-bg); color:var(--menu-link);
-    display:none; gap:12px; padding:14px 16px 16px; border-radius:0 0 14px 14px; box-shadow:0 16px 40px rgba(0,0,0,.16);
-    transform:translateY(-6px); opacity:0; pointer-events:none; z-index:1201;
+  .mobile-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: var(--menu-bg);
+    color: var(--menu-link);
+    display: none;
+    gap: 12px;
+    padding: 14px 16px 16px;
+    border-radius: 0 0 14px 14px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
+    transform: translateY(-6px);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1201;
   }
-  .mobile-nav a{ color:inherit; text-align:center; padding:12px; border-radius:10px; }
-  .site-header.is-open .mobile-nav{ display:grid !important; opacity:1 !important; pointer-events:auto !important; transform:translateY(0) !important; }
+  .mobile-nav a {
+    color: inherit;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+  }
+  .site-header.is-open .mobile-nav {
+    display: grid !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+  }
 
   /* backdrop */
-  .site-header::after{ content:""; position:fixed; inset:0; background:rgba(0,0,0,.35); opacity:0; pointer-events:none; z-index:1100; transition:opacity .18s; }
-  .site-header.is-open::after{ opacity:1; pointer-events:auto; }
+  .site-header::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1100;
+    transition: opacity 0.18s;
+  }
+  .site-header.is-open::after {
+    opacity: 1;
+    pointer-events: auto;
+  }
 
-  .header-spacer { height:0px !important; } /* spațiu fix sub bară pe mobil */
-}/* Centrare conținut HERO și CTA pe mobil */
+  .header-spacer {
+    height: 0px !important;
+  } /* spațiu fix sub bară pe mobil */
+} /* Centrare conținut HERO și CTA pe mobil */
 @media (max-width: 768px) {
   .hero__content {
     text-align: center;
@@ -1101,7 +1700,7 @@
   }
 
   .hero__content .cta .btn {
-    width: 80%;   /* butoanele mai late, mai aerisite */
+    width: 80%; /* butoanele mai late, mai aerisite */
     max-width: 280px;
   }
 
@@ -1114,61 +1713,63 @@
     display: block;
     margin: 4px 0;
   }
-}/* Centrare logo-uri parteneri pe mobil */
+} /* Centrare logo-uri parteneri pe mobil */
 @media (max-width: 768px) {
   .partners {
     display: flex;
-    justify-content: center;  /* centrează logo-urile */
+    justify-content: center; /* centrează logo-urile */
     align-items: center;
     gap: 16px;
-    flex-wrap: wrap;          /* ca să nu iasă în afara ecranului */
+    flex-wrap: wrap; /* ca să nu iasă în afara ecranului */
     padding: 12px 0;
   }
 
   .partners img {
-    max-height: 40px;         /* ajustează înălțimea pe mobil */
+    max-height: 40px; /* ajustează înălțimea pe mobil */
     object-fit: contain;
   }
-}/* Centrare + dimensiuni mai mari logo-uri parteneri pe mobil */
+} /* Centrare + dimensiuni mai mari logo-uri parteneri pe mobil */
 @media (max-width: 768px) {
   .partners {
     display: flex;
-    justify-content: center;   /* centrează pe mijloc */
+    justify-content: center; /* centrează pe mijloc */
     align-items: center;
-    gap: 20px;                 /* spațiu între ele */
-    flex-wrap: wrap;           /* trec pe mai multe rânduri dacă nu încap */
+    gap: 20px; /* spațiu între ele */
+    flex-wrap: wrap; /* trec pe mai multe rânduri dacă nu încap */
     padding: 16px 0;
   }
 
   .partners img {
-    max-height: 100px;          /* puțin mai mari decât 40px */
-    max-width: 120px;          /* limitează lățimea ca să nu iasă prea mari */
+    max-height: 100px; /* puțin mai mari decât 40px */
+    max-width: 120px; /* limitează lățimea ca să nu iasă prea mari */
     object-fit: contain;
   }
-}@media (max-width: 768px) {
+}
+@media (max-width: 768px) {
   /* Butonul "Cere ofertă" din header */
   .header-actions .btn-cta {
-    font-size: 14px;         /* mai mic textul */
-    padding: 6px 12px;       /* mai puțin padding */
-    border-radius: 20px;     /* colțuri mai rotunjite */
+    font-size: 14px; /* mai mic textul */
+    padding: 6px 12px; /* mai puțin padding */
+    border-radius: 20px; /* colțuri mai rotunjite */
   }
 
   /* Burger menu */
   .burger span {
     height: 2px;
     margin: 4px 0;
-    background: #ffd500;     /* galben vizibil */
+    background: #ffd500; /* galben vizibil */
     border-radius: 2px;
   }
-}@media (max-width: 768px) {
+}
+@media (max-width: 768px) {
   .hero__content h1 {
-    font-size: 22px;          /* titlul mai mic */
+    font-size: 22px; /* titlul mai mic */
     line-height: 1.3;
     margin-bottom: 12px;
   }
 
   .hero__content .lead {
-    font-size: 15px;          /* subtitlu mai mic */
+    font-size: 15px; /* subtitlu mai mic */
     line-height: 1.5;
     margin-bottom: 16px;
   }
@@ -1187,38 +1788,53 @@
     font-size: 14px;
     margin-bottom: 6px;
   }
-}@media (max-width: 768px) {
+}
+@media (max-width: 768px) {
   .site-header {
-    --accent: #ffd91a;        /* galben brand */
+    --accent: #ffd91a; /* galben brand */
     --hdr-bg: var(--header-bg, #111);
     --hdr-txt: var(--text, #fff);
-    position: sticky; top: 0; z-index: 1200;
+    position: sticky;
+    top: 0;
+    z-index: 1200;
     background: var(--hdr-bg);
   }
 
   /* Layout header: logo | burger | CTA */
-  .site-header .header-inner{
+  .site-header .header-inner {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
     padding: 8px 12px;
-    max-width: 420px; margin: 0 auto;
+    max-width: 420px;
+    margin: 0 auto;
   }
-  .header-actions{ display: contents; }
-  .brand img{ height: 90px; width: 90px; }
+  .header-actions {
+    display: contents;
+  }
+  .brand img {
+    height: 90px;
+    width: 90px;
+  }
 
-  .header-actions .btn-cta{
-    grid-column: 3; justify-self: end;
-    padding: 6px 10px; min-height: 32px;
-    font-size: 13px; font-weight: 700;
+  .header-actions .btn-cta {
+    grid-column: 3;
+    justify-self: end;
+    padding: 6px 10px;
+    min-height: 32px;
+    font-size: 13px;
+    font-weight: 700;
     border-radius: 10px;
   }
 
   /* BURGER */
-  .burger{
-    grid-column: 2; justify-self: center;
-    width: 38px; height: 32px;
-    display: grid; place-items: center;
+  .burger {
+    grid-column: 2;
+    justify-self: center;
+    width: 38px;
+    height: 32px;
+    display: grid;
+    place-items: center;
     border: 1.5px solid transparent;
     border-radius: 9px;
     background: transparent;
@@ -1227,41 +1843,53 @@
   }
 
   /* cele 3 linii galbene */
-  .burger span{
-    position: absolute; left: 50%;
+  .burger span {
+    position: absolute;
+    left: 50%;
     transform: translateX(-50%);
-    width: 20px; height: 2px; border-radius: 2px;
-    background: var(--accent);    /* acum galben */
-    transition: transform .2s ease, top .2s ease, opacity .2s ease;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--accent); /* acum galben */
+    transition: transform 0.2s ease, top 0.2s ease, opacity 0.2s ease;
   }
-  .burger span:nth-child(1){ top: 10px; }
-  .burger span:nth-child(2){ top: 15px; }
-  .burger span:nth-child(3){ top: 20px; }
+  .burger span:nth-child(1) {
+    top: 10px;
+  }
+  .burger span:nth-child(2) {
+    top: 15px;
+  }
+  .burger span:nth-child(3) {
+    top: 20px;
+  }
 
   /* X când meniul e deschis */
-  .site-header.is-open .burger span:nth-child(1){
-    top: 15px; transform: translateX(-50%) rotate(45deg);
+  .site-header.is-open .burger span:nth-child(1) {
+    top: 15px;
+    transform: translateX(-50%) rotate(45deg);
   }
-  .site-header.is-open .burger span:nth-child(2){
+  .site-header.is-open .burger span:nth-child(2) {
     opacity: 0;
   }
-  .site-header.is-open .burger span:nth-child(3){
-    top: 15px; transform: translateX(-50%) rotate(-45deg);
+  .site-header.is-open .burger span:nth-child(3) {
+    top: 15px;
+    transform: translateX(-50%) rotate(-45deg);
   }
-}@media (max-width: 768px) {
-  /* facem bara mai înaltă DOAR pe mobil */
+}
+@media (max-width: 768px) {
+  /* header height pe mobil */
   .site-header {
-    height: 80px;       /* înălțime mai mare */
+    height: 100px; /* înălțime redusă */
   }
 
   .header-inner {
-    height: 100%;       /* să se alinieze pe centru vertical */
-    padding: 0 16px;    /* puțin spațiu lateral */
+    height: 100%; /* să se alinieze pe centru vertical */
+    padding: 0 16px; /* puțin spațiu lateral */
   }
 
   /* centrăm vertical logo și butoane */
   .site-header img {
-    max-height: 90px;   /* scalăm logo să nu fie prea mare */
+    max-height: 90px; /* scalăm logo să nu fie prea mare */
   }
 
   .header-actions .btn-cta {
