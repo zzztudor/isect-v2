@@ -760,7 +760,7 @@
   /* titlu + subtitlu mai mari */
   .contact-page .sec-title {
     font-size: 1.6rem;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
   }
   .contact-page .subtitle {
     font-size: 1.05rem;
@@ -810,7 +810,7 @@
   /* titlul și subtitlul */
   .contact-page .sec-title {
     font-size: 1.8rem;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
   }
   .contact-page .subtitle {
     font-size: 1.15rem;
@@ -915,7 +915,7 @@
   /* titlu + subtitlu similare cu hero-ul de pe index */
   .contact-page .sec-title {
     font-size: 1.9rem;
-    margin-bottom: 14px;
+    margin-bottom: 20px;
   }
   .contact-page .subtitle {
     font-size: 1.2rem;
@@ -977,7 +977,7 @@
   /* Titlul și subtitlul să iasă în față */
   .contact-page .sec-title {
     font-size: 2.2rem;
-    margin-bottom: 18px;
+    margin-bottom: 24px;
   }
   .contact-page .subtitle {
     font-size: 1.3rem;
@@ -1041,7 +1041,7 @@
   /* Titlul & subtitlul foarte mari */
   .contact-page .sec-title {
     font-size: 2.4rem;
-    margin-bottom: 20px;
+    margin-bottom: 26px;
   }
   .contact-page .subtitle {
     font-size: 1.35rem;
